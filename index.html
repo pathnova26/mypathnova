@@ -347,6 +347,102 @@
     </div>
     <div class="main-content">
         </div>
+<!-- =========================================================
+     RISING STAR GATEWAY CARD FOR INDEX.HTML
+     ========================================================= -->
+<div class="pnova-gateway-container">
+    <!-- Link checks for the separate page file -->
+    <a href="risingstar.html" class="pnova-rising-gateway-card">
+        <div class="gateway-card-glow"></div>
+        <div class="gateway-content">
+            <div class="gateway-icon">✨</div>
+            <h3 class="gateway-title">Rising Star</h3>
+            <p class="gateway-desc">Discover the journey, passion, and achievements of young talents with big dreams.</p>
+            <span class="gateway-action-btn">Explore Section ➔</span>
+        </div>
+    </a>
+</div>
+
+<style>
+    /* Styling for the gateway card on the homepage */
+    .pnova-gateway-container {
+        padding: 16px;
+        max-width: 360px;
+        margin: 15px auto;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .pnova-rising-gateway-card {
+        display: block;
+        position: relative;
+        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        border: 1px solid rgba(217, 70, 239, 0.25);
+        border-radius: 16px;
+        padding: 24px;
+        text-decoration: none;
+        overflow: hidden;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .pnova-rising-gateway-card:hover {
+        transform: translateY(-5px);
+        border-color: #d946ef;
+    }
+
+    /* Subtle nebula glow effect behind text */
+    .gateway-card-glow {
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, rgba(217, 70, 239, 0.2) 0%, transparent 70%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .gateway-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .gateway-icon {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .gateway-title {
+        font-size: 20px;
+        font-weight: 800;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        margin-bottom: 6px;
+        background: linear-gradient(135deg, #38bdf8, #d946ef);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .gateway-desc {
+        font-size: 13px;
+        color: #94a3b8;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+
+    .gateway-action-btn {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 700;
+        color: #d946ef;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: color 0.2s ease;
+    }
+
+    .pnova-rising-gateway-card:hover .gateway-action-btn {
+        color: #38bdf8;
+    }
+</style>
 
 </body>
 </html>
