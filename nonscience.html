@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathNova - Commerce & Finance Entrance Exams</title>
+    <style>
+        /* Cosmic Cyber Theme Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #030611;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 10% 50%, rgba(56, 189, 248, 0.06) 0%, transparent 40%);
+            color: #f8fafc;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        /* Navbar Layout */
+        .pnova-navbar {
+            background-color: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .back-btn {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .back-btn:hover { color: #fbbf24; }
+
+        /* Main Container */
+        .content-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Header Area */
+        .page-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-badge {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            background: rgba(251, 191, 36, 0.1);
+            padding: 6px 16px;
+            border-radius: 50px;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .main-title {
+            font-size: 38px;
+            font-weight: 800;
+            background: linear-gradient(to right, #ffffff, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        /* Cyber Panels Config */
+        .cyber-panel {
+            background: rgba(10, 15, 30, 0.6);
+            backdrop-filter: blur(8px);
+            border-radius: 14px;
+            padding: 30px;
+            position: relative;
+        }
+
+        /* Corporate Gold / Commerce Color System */
+        .text-commerce {
+            color: #fbbf24 !important; /* Premium Cyber Gold */
+        }
+        .glow-commerce {
+            border: 1px solid rgba(251, 191, 36, 0.25) !important;
+            box-shadow: 0 0 25px rgba(251, 191, 36, 0.04) !important;
+        }
+        .glow-commerce:hover {
+            border-color: #fbbf24 !important;
+            box-shadow: 0 0 25px rgba(251, 191, 36, 0.15) !important;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 35px 0 20px 0;
+            color: #ffffff;
+            border-left: 4px solid #fbbf24;
+            padding-left: 12px;
+        }
+
+        /* Subject Grid Info Styling */
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .subject-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.2s;
+        }
+        .subject-card:hover {
+            background: rgba(251, 191, 36, 0.02);
+            border-color: rgba(251, 191, 36, 0.2);
+        }
+
+        /* Table Custom Layout Styles */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+        
+        .commerce-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+            text-align: left;
+        }
+        
+        .commerce-table th {
+            background: rgba(251, 191, 36, 0.06);
+            color: #fbbf24;
+            font-weight: 700;
+            padding: 14px 16px;
+            border-bottom: 2px solid rgba(251, 191, 36, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .commerce-table td {
+            padding: 14px 16px;
+            color: #cbd5e1;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        
+        .commerce-table tr:hover td {
+            background: rgba(251, 191, 36, 0.02);
+            color: #ffffff;
+        }
+        
+        .commerce-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            background: rgba(251, 191, 36, 0.1);
+            color: #fbbf24;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(251, 191, 36, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="pnova-navbar">
+        <div style="font-weight: 800; font-size: 18px; letter-spacing: 1px; color: #fff;">Path<span style="color:#fbbf24;">Nova</span></div>
+        <a href="index.html" class="back-btn">✕ Close Board</a>
+    </nav>
+
+    <main class="content-container">
+
+        <div class="page-header">
+            <span class="section-badge">COMMERCE & FINANCE DASHBOARD</span>
+            <h1 class="main-title">Business, Economy & Financial Streams</h1>
+        </div>
+
+        <div class="section-title">Commerce Stream Overview</div>
+
+        <div class="cyber-panel glow-commerce" style="margin-bottom: 40px;">
+            
+            <div style="margin-bottom: 25px;">
+                <h4 style="color: #ffffff; font-size: 16px; margin-bottom: 10px;">Commerce & Finance Kya Hai?</h4>
+                <p style="font-size: 14px; color: #94a3b8; line-height: 1.6;">
+                    Commerce aur Finance ka matlab hota hai trade, markets, money systems aur business operations ki study. Yeh stream kisi desh ki economy ka pahiya hoti hai. Isme students seekhte hain ki corporates kaise kaam karte hain, startups ko bada kaise kiya jata hai, wealth ko invest aur optimize kaise kiya jata hai, aur global markets kaise run hote hain. Agar aapko business strategies, market data, stock trade aur analytics mein interest hai, toh yeh stream aapke liye bani hai.
+                </p>
+            </div>
+
+            <h4 style="color: #ffffff; font-size: 15px; margin-bottom: 5px;">Core Subjects Jo Isme Padhte Hain:</h4>
+            <div class="subject-grid">
+                
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #fbbf24; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        📈 Accountancy (लेखाशास्त्र)
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        <strong>Kya padhte hain:</strong> Financial data tracking, tax structures, auditing aur financial statements balance sheet banana.
+                        <br><span style="color: #64748b;">Example: Kisi multinational company ka annual profit audit karna ya audit systems analyze karna.</span>
+                    </div>
+                </div>
+
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #fbbf24; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        📊 Economics (अर्थशास्त्र)
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        <strong>Kya padhte hain:</strong> Demand-supply curves, inflation trends, GDP metrics aur market behavior theories.
+                        <br><span style="color: #64748b;">Example: Reserve Bank of India (RBI) ke interest rate badhane se market aur consumers par kya asar padega, uski study karna.</span>
+                    </div>
+                </div>
+
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #fbbf24; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        💼 Business Studies & Management
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        <strong>Kya padhte hain:</strong> Corporate management, marketing rules, human resource frameworks aur organizational logic.
+                        <br><span style="color: #64748b;">Example: Ek chote startup brand ko badha karke international marketplace par distribute karne ki structural planning banana.</span>
+                    </div>
+                </div>
+
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #fbbf24; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        💰 Finance & Investment Banking
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        <strong>Kya padhte hain:</strong> Capital optimization, stock markets asset tracing, corporate funding aur portfolio risk analyses.
+                        <br><span style="color: #64748b;">Example: Mutual funds manage karna ya top-tier companies ke investments ko evaluate karke returns expand karna.</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 30px 0;">
+
+            <h4 style="color: #ffffff; font-size: 16px; margin-bottom: 15px;">Commerce & Business Management Entrance Blueprint</h4>
+            <div class="table-wrapper">
+                <table class="commerce-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Exam Gateway</th>
+                            <th style="width: 50%;">Conducting Board & Target Institutions Matrix</th>
+                            <th style="width: 30%;">Program Streams Scope</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="highlight-text text-commerce">CUET-UG</td>
+                            <td>National Testing Agency (NTA) - For Top-Tier Central Universities India</td>
+                            <td><span class="commerce-tag">B.Com (Hons) / BBA / BMS</span></td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-commerce">NMIMS-NPAT</td>
+                            <td>Narsee Monjee Institute (Mumbai, Navi Mumbai, Bengaluru, Hyderabad, Indore, Chandigarh & Dhule campuses)</td>
+                            <td><span class="commerce-tag">B.Com (Hons) / BBA / B.Sc Finance</span></td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-commerce">Christ Entrance Test</td>
+                            <td>Christ University (Bengaluru & Multi-Campus Management Nodes)</td>
+                            <td>B.Com / BBA Honours Programs</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-commerce">B.Com-CET</td>
+                            <td>Guru Gobind Singh Indraprastha University (GGSIPU, Delhi)</td>
+                            <td>B.Com Professional (State Capital Pool)</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-commerce">JMI-ET</td>
+                            <td>Jamia Millia Islamia University Selection Cell (New Delhi Node)</td>
+                            <td>B.Com (Hons) / Corporate Studies</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-commerce">UG-JET</td>
+                            <td>Jain University Undergrad Entrance Test (Bangalore Arena)</td>
+                            <td>B.Com / BBA Corporate Tracks</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-commerce">JSAT</td>
+                            <td>O.P. Jindal Global University (Jindal Scholastic Aptitude Test, Sonipat)</td>
+                            <td>Global B.Com / Specialized Finance</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-commerce">KALSEE</td>
+                            <td>Kalinga University Scholastic Entrance Exam (Chhattisgarh Infrastructure)</td>
+                            <td>Commerce & Undergrad Allocations</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-commerce">SSSIHL-UGT</td>
+                            <td>Sri Sathya Sai Institute of Higher Learning Undergraduate Test (Andhra Pradesh)</td>
+                            <td>B.Com (Hons) Core Academic Matrix</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-commerce">AMU-ET</td>
+                            <td>Aligarh Muslim University Faculty Screening Modules</td>
+                            <td>B.Com / Management Studies Path</td>
+                        </tr>
+
+                        <tr>
+                            <td class="highlight-text text-commerce">UGAT</td>
+                            <td>AIMA (All India Management Association Under Graduate Aptitude Test)</td>
+                            <td><span class="commerce-tag">National Level BBA / Integrated MBA</span></td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-commerce">MITWPU-CET</td>
+                            <td>MIT World Peace University (Pune Technological Management Nodes)</td>
+                            <td>B.Com Integrated / FinTech Tracks</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-commerce">PWC-ET</td>
+                            <td>Patna Women's College Entrance Test (Patna Autonomous Campus Node, Bihar)</td>
+                            <td>B.Com / Vocational Commerce Modules</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: rgba(251, 191, 36, 0.04); border: 1px dashed rgba(251, 191, 36, 0.3); border-radius: 8px; padding: 15px; margin-top: 25px; display: flex; align-items: flex-start; gap: 12px;">
+                <span style="font-size: 18px; color: #fbbf24;">💼</span>
+                <div style="font-size: 13px; color: #cbd5e1; line-height: 1.5;">
+                    <strong style="color: #fbbf24;">Important Admission Verification Note:</strong> Har elite business institute aur private college ka mathematics/non-mathematics configuration criterion B.Com ya BBA courses ke liye thoda alag ho sakta hai. Kuch state boards domicile points ka advantage dete hain. Students apply karne se pehle **unke official domains aur admission dashboards par personally verify zaroor karein**.
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
+        
+                  
+                          <style>
+            /* Soft Baby Pink / Pastel Rose Color System */
+            .text-babypink {
+                color: #f472b6 !important; /* Soft Pastel Pink */
+            }
+            .glow-babypink {
+                border: 1px solid rgba(244, 114, 182, 0.3) !important;
+                box-shadow: 0 0 25px rgba(244, 114, 182, 0.05) !important;
+            }
+            .glow-babypink:hover {
+                border-color: #f472b6 !important;
+                box-shadow: 0 0 25px rgba(244, 114, 182, 0.18) !important;
+            }
+            
+            .art-table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 13.5px;
+                text-align: left;
+            }
+            
+            .art-table th {
+                background: rgba(244, 114, 182, 0.08);
+                color: #f472b6;
+                font-weight: 700;
+                padding: 14px 16px;
+                border-bottom: 2px solid rgba(244, 114, 182, 0.25);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            
+            .art-table td {
+                padding: 14px 16px;
+                color: #cbd5e1;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                vertical-align: top;
+                line-height: 1.5;
+            }
+            
+            .art-table tr:hover td {
+                background: rgba(244, 114, 182, 0.03);
+                color: #ffffff;
+            }
+            
+            .art-tag {
+                display: inline-block;
+                font-size: 11px;
+                font-weight: 600;
+                background: rgba(244, 114, 182, 0.12);
+                color: #f472b6;
+                padding: 2px 8px;
+                border-radius: 4px;
+                border: 1px solid rgba(244, 114, 182, 0.25);
+                margin-bottom: 4px;
+            }
+        </style>
+
+        <div class="section-title" style="border-left: 4px solid #f472b6; color: #ffffff; margin-top: 50px;">
+            Design, Fine Arts & Visual Arts Overview (Complete Matrix)
+        </div>
+
+        <div class="cyber-panel glow-babypink" style="margin-bottom: 40px;">
+            
+            <div style="margin-bottom: 25px;">
+                <h4 style="color: #ffffff; font-size: 16px; margin-bottom: 10px;">Design & Arts Stream Kya Hai?</h4>
+                <p style="font-size: 14px; color: #94a3b8; line-height: 1.6;">
+                    Yeh field un students ke liye hai jo duniya ko apne creative aur aesthetic vision se shape karna chahte hain. Isme B.Des (Bachelor of Design) aur BFA (Bachelor of Fine Arts) jaise courses aate hain. Yahan aap Fashion, Product modeling, UI/UX, Interior spacing, aur traditional painting/sculpting par kaam karte hain. Is industry mein degree se zyada aapka "Portfolio" aur practical imagination matter karta hai.
+                </p>
+            </div>
+
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #f472b6; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        👗 Fashion & Lifestyle Design
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        Apparel creation, footwear modeling, jewelry mapping aur global fashion trends ki study.
+                    </div>
+                </div>
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #f472b6; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        🛋️ Industrial & Product Design
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        Digital gadgets, furniture, aur daily use products ko user-friendly aur stylish banana.
+                    </div>
+                </div>
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #f472b6; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        🎨 Fine Arts & Visuals (BFA)
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        Canvas painting, applied arts, commercial photography, sculpting aur animation.
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 30px 0;">
+
+            <h4 style="color: #ffffff; font-size: 16px; margin-bottom: 15px;">Complete Design & Arts Entrance Blueprint</h4>
+            <div class="table-wrapper">
+                <table class="art-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Exam Gateway</th>
+                            <th style="width: 45%;">Conducting Board & Target Institutions</th>
+                            <th style="width: 35%;">Program Streams Scope</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="highlight-text text-babypink">NIFT Entrance</td>
+                            <td>National Institute of Fashion Technology (All 18 Campuses)</td>
+                            <td><span class="art-tag">B.Des (Fashion, Leather, Accessory)</span></td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">NID DAT</td>
+                            <td>National Institute of Design (Ahmedabad, Kurukshetra, Vijayawada)</td>
+                            <td><span class="art-tag">B.Des (Industrial, Textile, Comm.)</span></td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">UCEED</td>
+                            <td>IIT Bombay (Accepted by IIT Delhi, Guwahati, Roorkee, IIITDM)</td>
+                            <td>Premium B.Des (Product & Tech Design)</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">FDDI AIST</td>
+                            <td>Footwear Design & Development Institute (Ministry of Commerce)</td>
+                            <td>B.Des (Footwear & Leather Goods)</td>
+                        </tr>
+
+                        <tr>
+                            <td class="highlight-text text-babypink">SEED</td>
+                            <td>Symbiosis Institute of Design (SID, Pune)</td>
+                            <td>B.Des Core Tracks</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">SMEAT</td>
+                            <td>Srishti Manipal Institute of Art, Design & Technology</td>
+                            <td>B.Des / BFA Creative Clusters</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">MITID DAT</td>
+                            <td>MIT Institute of Design (Pune / Ujjain)</td>
+                            <td>B.Des (Product, Graphic, UX)</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">UID DAT</td>
+                            <td>Unitedworld Institute of Design (Karnavati University)</td>
+                            <td>Global B.Des Frameworks</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">PEARL Academy</td>
+                            <td>Pearl Academy (Delhi, Mumbai, Bengaluru, Jaipur)</td>
+                            <td>Fashion, Styling & Media Design</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">IIAD Entrance</td>
+                            <td>Indian Institute of Art and Design (New Delhi)</td>
+                            <td>Interior, Fashion & Communication</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">IICD Entrance</td>
+                            <td>Indian Institute of Crafts & Design (Jaipur)</td>
+                            <td>Craft Design & Material Specialization</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">ISDI Challenge</td>
+                            <td>Indian School of Design and Innovation (Mumbai)</td>
+                            <td>Parsons-affiliated Design Modules</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">AIFD WAT</td>
+                            <td>Army Institute of Fashion & Design (Bengaluru)</td>
+                            <td>B.Sc Fashion & Apparel Design</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">SOFT CET</td>
+                            <td>School of Fashion Technology (Pune)</td>
+                            <td>Fashion Design & Tech</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">GLS DAT</td>
+                            <td>GLS Institute of Design (Ahmedabad)</td>
+                            <td>Apparel, Gems & Jewelry Design</td>
+                        </tr>
+
+                        <tr>
+                            <td class="highlight-text text-babypink">WUDAT</td>
+                            <td>World University of Design (Delhi NCR)</td>
+                            <td>B.Des / BVA Allocations</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">AIEED</td>
+                            <td>ARCH College of Design & Business (Jaipur)</td>
+                            <td>B.Des / Interactive Design</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">UPES DAT</td>
+                            <td>UPES School of Design (Dehradun)</td>
+                            <td>Transportation & Product Design</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">DJ Academy</td>
+                            <td>DJ Academy of Design Entrance (Coimbatore)</td>
+                            <td>Industrial & Comm. Design</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">Univ. Specific (Tech)</td>
+                            <td>SRM JEEE (Design), KIITEE (Design), V-SAT, SUAT, Amity JEE, LPU NEST</td>
+                            <td>Private University B.Des/Fashion Integrations</td>
+                        </tr>
+
+                        <tr>
+                            <td class="highlight-text text-babypink">CUET-UG (Fine Arts)</td>
+                            <td>NTA - For Central Universities (incl. Delhi College of Art)</td>
+                            <td><span class="art-tag">BFA (Applied Art, Painting, Sculpture)</span></td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">MSU Entrance</td>
+                            <td>Maharaja Sayajirao University (Baroda)</td>
+                            <td>Highly Reputed BFA Admissions</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">BHU UET (BFA)</td>
+                            <td>Banaras Hindu University (Varanasi)</td>
+                            <td>Faculty of Visual Arts Core</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">JMI / AMU Exam</td>
+                            <td>Jamia Millia Islamia / Aligarh Muslim University</td>
+                            <td>BFA Central Admission Node</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-babypink">State & Regional Arts</td>
+                            <td>Kurukshetra Univ., Banasthali Vidyapith, CFA Kerala, CUCET</td>
+                            <td>State-level Fine Arts / Design Allocation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: rgba(244, 114, 182, 0.04); border: 1px dashed rgba(244, 114, 182, 0.4); border-radius: 8px; padding: 15px; margin-top: 25px; display: flex; align-items: flex-start; gap: 12px;">
+                <span style="font-size: 18px; color: #f472b6;">🖍️</span>
+                <div style="font-size: 13px; color: #cbd5e1; line-height: 1.5;">
+                    <strong style="color: #f472b6;">Important Studio Test & Portfolio Note:</strong> Inme se lagbhag sabhi top exams (NIFT, NID, UCEED, UID, PEARL) 2 phases mein hote hain. Pehla MCQ/Drawing Test aur doosra <strong style="color:#fff;">Situation Test / Studio Assessment</strong>. Aapko on-the-spot craft materials diye jayenge aur ek live 3D model banana padega. Ek physical ya Behance par digital portfolio maintain karna abhi se shuru kar dein!
+                </div>
+            </div>
+        </div>
+        <style>
+            /* Light Brown / Caramel Copper Color System */
+            .text-eco {
+                color: #d98b38 !important; /* Premium Light Brown */
+            }
+            .glow-eco {
+                border: 1px solid rgba(217, 139, 56, 0.3) !important;
+                box-shadow: 0 0 25px rgba(217, 139, 56, 0.05) !important;
+            }
+            .glow-eco:hover {
+                border-color: #d98b38 !important;
+                box-shadow: 0 0 25px rgba(217, 139, 56, 0.18) !important;
+            }
+            
+            .eco-table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 13.5px;
+                text-align: left;
+            }
+            
+            .eco-table th {
+                background: rgba(217, 139, 56, 0.08);
+                color: #d98b38;
+                font-weight: 700;
+                padding: 14px 16px;
+                border-bottom: 2px solid rgba(217, 139, 56, 0.25);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            
+            .eco-table td {
+                padding: 14px 16px;
+                color: #cbd5e1;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                vertical-align: top;
+                line-height: 1.5;
+            }
+            
+            .eco-table tr:hover td {
+                background: rgba(217, 139, 56, 0.03);
+                color: #ffffff;
+            }
+            
+            .eco-tag {
+                display: inline-block;
+                font-size: 11px;
+                font-weight: 600;
+                background: rgba(217, 139, 56, 0.12);
+                color: #d98b38;
+                padding: 2px 8px;
+                border-radius: 4px;
+                border: 1px solid rgba(217, 139, 56, 0.25);
+                margin-bottom: 4px;
+            }
+
+            /* Test Pattern Card Styles */
+            .pattern-box {
+                background: rgba(255, 255, 255, 0.02);
+                border-left: 3px solid #d98b38;
+                padding: 15px;
+                margin-bottom: 12px;
+                border-radius: 0 6px 6px 0;
+            }
+            .pattern-title {
+                color: #d98b38;
+                font-weight: 600;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+            .pattern-desc {
+                color: #94a3b8;
+                font-size: 13px;
+                line-height: 1.4;
+            }
+        </style>
+
+        <div class="section-title" style="border-left: 4px solid #d98b38; color: #ffffff; margin-top: 50px;">
+            Economics, Statistics & Data Research
+        </div>
+
+        <div class="cyber-panel glow-eco" style="margin-bottom: 40px;">
+            
+            <div style="margin-bottom: 25px;">
+                <h4 style="color: #ffffff; font-size: 16px; margin-bottom: 10px;">Economics & Stats Stream Kya Hai?</h4>
+                <p style="font-size: 14px; color: #94a3b8; line-height: 1.6;">
+                    Economics sirf paise ki study nahi hai, yeh ek highly analytical science hai. B.Sc/B.A. (Hons) Economics aur Statistics un students ke liye hai jo data se khelna jante hain. Isme aap demand-supply logic, global financial markets, inflation policies, aur data science (Econometrics) padhte hain. Aaj ke time par top economists aur statisticians ki demand investment banks, policy think-tanks aur tech giants (jaise Google/Amazon) mein bahut high hai.
+                </p>
+            </div>
+
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #d98b38; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        📉 Micro & Macro Economics
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        Consumer behavior, GDP inflation tracking, international trade policies aur reserve bank monetary systems.
+                    </div>
+                </div>
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #d98b38; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        📊 Statistics & Econometrics
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        Maths ka use karke real-world economic data ko analyze karna, forecasting models banana aur trends predict karna.
+                    </div>
+                </div>
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #d98b38; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        💹 Financial Markets
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        Stock market analysis, public finance policies, aur global wealth distribution ki mathematical study.
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 30px 0;">
+
+            <h4 style="color: #ffffff; font-size: 16px; margin-bottom: 15px;">Premier Economics & Statistics Entrance Blueprint</h4>
+            <div class="table-wrapper">
+                <table class="eco-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Exam Gateway</th>
+                            <th style="width: 45%;">Conducting Board & Target Institutions</th>
+                            <th style="width: 35%;">Program Streams Scope</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="highlight-text text-eco">ISI Admission Test</td>
+                            <td>Indian Statistical Institute (Kolkata, Delhi, Bengaluru)</td>
+                            <td><span class="eco-tag">B.Stat / B.Math / B.Sc (Eco)</span></td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-eco">CUET-UG</td>
+                            <td>NTA - For SRCC, St. Stephens, JNU, Delhi University etc.</td>
+                            <td><span class="eco-tag">B.A. (Hons) Economics</span></td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-eco">IIT Madras HSEE</td>
+                            <td>IIT Madras (Department of Humanities & Social Sciences)</td>
+                            <td>Integrated M.A. in Economics</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-eco">GIPE Entrance</td>
+                            <td>Gokhale Institute of Politics and Economics (Pune)</td>
+                            <td>B.Sc Economics (Highly Reputed)</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-eco">MSE Entrance</td>
+                            <td>Madras School of Economics (Chennai)</td>
+                            <td>Integrated M.A. Economics / Policy</td>
+                        </tr>
+
+                        <tr>
+                            <td class="highlight-text text-eco">NMIMS NPAT</td>
+                            <td>Narsee Monjee Institute of Management Studies (Sarla Anil Modi School)</td>
+                            <td>B.Sc Economics</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-eco">Symbiosis SET</td>
+                            <td>Symbiosis School of Economics (Pune)</td>
+                            <td>B.Sc Economics (Hons)</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-eco">Ashoka AAT</td>
+                            <td>Ashoka University Aptitude Test (Sonipat)</td>
+                            <td>B.A. (Hons) Economics / Fin.</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-eco">SNUSAT</td>
+                            <td>Shiv Nadar University (Delhi NCR)</td>
+                            <td>B.Sc (Research) in Economics</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-eco">Christ CUET</td>
+                            <td>Christ University (Bengaluru Campuses)</td>
+                            <td>BA / B.Sc Economics & Analytics</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 30px 0;">
+
+            <h4 style="color: #ffffff; font-size: 16px; margin-bottom: 15px;">Standard Test Pattern For Eco Entrances (What to Study?)</h4>
+            <p style="font-size: 13.5px; color: #94a3b8; margin-bottom: 20px;">
+                Economics entrance exams thode alag hote hain kyunki inme **Class 12th ki Economics se zyada Class 12th ki Core Mathematics (Calculus/Algebra)** puchi jati hai. Entrance exams (jaise NMIMS, ISI, SNUSAT) mainly 3 ya 4 sections mein divided hote hain:
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr; gap: 5px;">
+                <div class="pattern-box">
+                    <div class="pattern-title">1. Quantitative Aptitude & Higher Mathematics (Most Important)</div>
+                    <div class="pattern-desc">
+                        Yeh section game-changer hota hai. Isme Class 11th aur 12th ki Core Maths (Calculus, Probability, Matrices, Algebra) aur Data Interpretation aati hai. <i>(ISI aur NMIMS ke liye yeh highest weightage rakhta hai).</i>
+                    </div>
+                </div>
+
+                <div class="pattern-box">
+                    <div class="pattern-title">2. Logical Reasoning & Analytical Skills</div>
+                    <div class="pattern-desc">
+                        Puzzles, blood relations, seating arrangements, syllogisms aur pattern decoding. Yeh check karta hai ki aap data problems ko kitni jaldi logically process karte hain.
+                    </div>
+                </div>
+
+                <div class="pattern-box">
+                    <div class="pattern-title">3. Verbal Ability & English Language</div>
+                    <div class="pattern-desc">
+                        Reading comprehensions (jo aksar financial ya philosophical passages hote hain), grammar checks, vocabulary aur critical reasoning.
+                    </div>
+                </div>
+
+                <div class="pattern-box">
+                    <div class="pattern-title">4. Domain Specific (Only for Exams like CUET)</div>
+                    <div class="pattern-desc">
+                        NCERT Class 12th ki Macroeconomics (National Income, Money & Banking) aur Indian Economic Development. <i>(Lekin dhyan rahe, CUET mein BA Eco Hons ke liye Maths ka test dena compulsory hai).</i>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: rgba(217, 139, 56, 0.05); border: 1px dashed rgba(217, 139, 56, 0.4); border-radius: 8px; padding: 15px; margin-top: 25px; display: flex; align-items: flex-start; gap: 12px;">
+                <span style="font-size: 18px; color: #d98b38;">⚠️</span>
+                <div style="font-size: 13px; color: #cbd5e1; line-height: 1.5;">
+                    <strong style="color: #d98b38;">Crucial Eligibility Alert:</strong> India ke zyadatar top colleges (DU SRCC, NMIMS, ISI, GIPE) mein Economics (Hons) karne ke liye **Class 12th mein Mathematics (Core ya Applied) hona mandatory (zaroori) hai**. Bina Class 12th Maths ke aap top-tier B.Sc Economics programs mein apply nahi kar sakte.
+                </div>
+            </div>
+        </div>
+
+                <style>
+            /* Royal Indigo / Legal Blue Color System */
+            .text-law {
+                color: #818cf8 !important; /* Premium Indigo */
+            }
+            .glow-law {
+                border: 1px solid rgba(129, 140, 248, 0.3) !important;
+                box-shadow: 0 0 25px rgba(129, 140, 248, 0.05) !important;
+            }
+            .glow-law:hover {
+                border-color: #818cf8 !important;
+                box-shadow: 0 0 25px rgba(129, 140, 248, 0.18) !important;
+            }
+            
+            .law-table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 13.5px;
+                text-align: left;
+            }
+            
+            .law-table th {
+                background: rgba(129, 140, 248, 0.08);
+                color: #818cf8;
+                font-weight: 700;
+                padding: 14px 16px;
+                border-bottom: 2px solid rgba(129, 140, 248, 0.25);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            
+            .law-table td {
+                padding: 14px 16px;
+                color: #cbd5e1;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                vertical-align: top;
+                line-height: 1.5;
+            }
+            
+            .law-table tr:hover td {
+                background: rgba(129, 140, 248, 0.03);
+                color: #ffffff;
+            }
+            
+            .law-tag {
+                display: inline-block;
+                font-size: 11px;
+                font-weight: 600;
+                background: rgba(129, 140, 248, 0.12);
+                color: #818cf8;
+                padding: 2px 8px;
+                border-radius: 4px;
+                border: 1px solid rgba(129, 140, 248, 0.25);
+                margin-bottom: 4px;
+            }
+        </style>
+
+        <div class="section-title" style="border-left: 4px solid #818cf8; color: #ffffff; margin-top: 50px;">
+            Law & Legal Studies (5-Year Integrated) Overview
+        </div>
+
+        <div class="cyber-panel glow-law" style="margin-bottom: 40px;">
+            
+            <div style="margin-bottom: 25px;">
+                <h4 style="color: #ffffff; font-size: 16px; margin-bottom: 10px;">Law Stream Kya Hai?</h4>
+                <p style="font-size: 14px; color: #94a3b8; line-height: 1.6;">
+                    Class 12th ke baad Law ek 5-year integrated program (B.A. LL.B, B.B.A. LL.B, ya B.Com LL.B) ke roop mein kiya jata hai. Yeh field unke liye hai jinki reading speed achhi hai, jo logical arguments build kar sakte hain, aur society ke rules ya corporate frameworks ko samajhna chahte hain. Top National Law Universities (NLUs) se graduation ke baad direct top tier law firms, corporate houses, ya litigation aur judiciary mein career banta hai.
+                </p>
+            </div>
+
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #818cf8; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        🏛️ Constitutional & Public Law
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        Desh ke samvidhan (Constitution), fundamental rights, aur government functioning ke legal rules ki deep study.
+                    </div>
+                </div>
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #818cf8; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        💼 Corporate & Commercial Law
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        Badi companies ke mergers, contracts, intellectual property (IPR), aur business regulations ko handle karna.
+                    </div>
+                </div>
+                <div class="subject-card">
+                    <div style="font-weight: 600; color: #818cf8; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        ⚖️ Criminal & Civil Litigation
+                    </div>
+                    <div style="font-size: 12.5px; color: #94a3b8; line-height: 1.4;">
+                        Courts mein actual cases ladna, evidence acts, IPC (Indian Penal Code), aur civil disputes ko resolve karna.
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 30px 0;">
+
+            <h4 style="color: #ffffff; font-size: 16px; margin-bottom: 15px;">Complete Law Entrance Blueprint (All India & State)</h4>
+            <div class="table-wrapper">
+                <table class="law-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Exam Gateway</th>
+                            <th style="width: 45%;">Conducting Board & Target Institutions</th>
+                            <th style="width: 35%;">Program Streams Scope</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="highlight-text text-law">CLAT</td>
+                            <td>Consortium of NLUs (For 24 National Law Universities)</td>
+                            <td><span class="law-tag">B.A. LL.B (Hons) / B.Sc LL.B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-law">AILET</td>
+                            <td>National Law University, Delhi (NLU-D exclusively)</td>
+                            <td><span class="law-tag">Premier B.A. LL.B (Hons)</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="highlight-text text-law">LSAT India</td>
+                            <td>Pearson VUE (For Jindal Global Law School & Top Private Colleges)</td>
+                            <td>Elite Private Law Integrations</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-law">SLAT</td>
+                            <td>Symbiosis International (Pune, Noida, Hyderabad, Nagpur)</td>
+                            <td>B.A. LL.B / B.B.A. LL.B</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-law">NMIMS LAT</td>
+                            <td>NMIMS (Kirit P. Mehta School of Law, Mumbai)</td>
+                            <td>Corporate Focused B.B.A. LL.B</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-law">CULEE</td>
+                            <td>Christ University (Bengaluru)</td>
+                            <td>Law & Management Integrations</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-law">ULSAT</td>
+                            <td>UPES (Dehradun)</td>
+                            <td>Tech/Cyber/Energy Law Specializations</td>
+                        </tr>
+
+                        <tr>
+                            <td class="highlight-text text-law">MH CET Law</td>
+                            <td>State CET Cell, Maharashtra (For GLC Mumbai, ILS Pune, etc.)</td>
+                            <td><span class="law-tag">Top State Govt. Law Colleges</span></td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-law">CUET-UG</td>
+                            <td>NTA - For Central Universities (BHU, Allahabad University, etc.)</td>
+                            <td>B.A. LL.B (Hons) in Central Hubs</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-law">PU BA LLB</td>
+                            <td>Panjab University (Chandigarh Campus & Affiliates)</td>
+                            <td>University Specific 5-Year Law</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-law">TS / AP LAWCET</td>
+                            <td>Telangana & Andhra Pradesh State Council of Higher Education</td>
+                            <td>State Quota Regional Law Colleges</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-text text-law">KLEE</td>
+                            <td>Commissioner for Entrance Examinations, Kerala</td>
+                            <td>Kerala State Law Admissions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: rgba(129, 140, 248, 0.04); border: 1px dashed rgba(129, 140, 248, 0.4); border-radius: 8px; padding: 15px; margin-top: 25px; display: flex; align-items: flex-start; gap: 12px;">
+                <span style="font-size: 18px; color: #818cf8;">📖</span>
+                <div style="font-size: 13px; color: #cbd5e1; line-height: 1.5;">
+                    <strong style="color: #818cf8;">Important Test Pattern Note (Specially for CLAT/AILET):</strong> Law ke entrance exams ab ratne wale (rote-learning) nahi rahe. CLAT poori tarah se **Reading Comprehension** par based hai. Aapko English passages, Current Affairs, Legal Reasoning, aur Logical Data padhkar jaldi analyze karna hota hai. Jo student newspaper (The Hindu/Indian Express) daily padhta hai, uske top NLUs crack karne ke chances sabse zyada hote hain!
+                </div>
+            </div>
+        </div>
+<style>
+    .milky-white-panel {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(248, 250, 252, 0.2);
+        padding: 25px;
+        border-radius: 12px;
+        color: #f8fafc;
+    }
+    .text-milky { color: #f8fafc !important; }
+    .arts-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .arts-table th { color: #f8fafc; border-bottom: 2px solid #f8fafc; padding: 12px; text-align: left; }
+    .arts-table td { color: #e2e8f0; border-bottom: 1px solid rgba(248, 250, 252, 0.1); padding: 12px; }
+    .pattern-tag { font-size: 11px; background: rgba(248, 250, 252, 0.1); padding: 3px 6px; border-radius: 4px; border: 1px solid #f8fafc; }
+</style>
+
+<div class="section-title" style="border-left: 4px solid #f8fafc; color: #f8fafc; margin-top: 50px;">
+    Arts & Humanities Entrance Matrix
+</div>
+
+<div class="milky-white-panel">
+    <table class="arts-table">
+        <thead>
+            <tr>
+                <th>Entrance Exam</th>
+                <th>Target Institution</th>
+                <th>Test Pattern (Core Subjects)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-milky"><strong>CUET-UG</strong></td>
+                <td>Central Universities (JNU, DU, BHU, AU)</td>
+                <td><span class="pattern-tag">Domain Subjects + GT + English</span></td>
+            </tr>
+            <tr>
+                <td class="text-milky"><strong>IPU-CET</strong></td>
+                <td>GGSIPU (Delhi)</td>
+                <td><span class="pattern-tag">English, Logic, General Awareness</span></td>
+            </tr>
+            <tr>
+                <td class="text-milky"><strong>TISS-BAT</strong></td>
+                <td>Tata Institute of Social Sciences</td>
+                <td><span class="pattern-tag">Current Affairs, Social Sensitivity, Logical</span></td>
+            </tr>
+            <tr>
+                <td class="text-milky"><strong>CHRIST Univ.</strong></td>
+                <td>Christ University (Bengaluru)</td>
+                <td><span class="pattern-tag">GK, Reasoning, English, Maths</span></td>
+            </tr>
+            <tr>
+                <td class="text-milky"><strong>JMI Entrance</strong></td>
+                <td>Jamia Millia Islamia</td>
+                <td><span class="pattern-tag">Subject Specific + Objective GK</span></td>
+            </tr>
+            <tr>
+                <td class="text-milky"><strong>ASHOKA Aptitude</strong></td>
+                <td>Ashoka University</td>
+                <td><span class="pattern-tag">Critical Thinking, Essay, Interview</span></td>
+            </tr>
+            <tr>
+                <td class="text-milky"><strong>XIC (Entrance)</strong></td>
+                <td>Xavier Institute of Communications</td>
+                <td><span class="pattern-tag">Media Aptitude + GK + Language</span></td>
+            </tr>
+            <tr>
+                <td class="text-milky"><strong>SYMBIOSIS (SET)</strong></td>
+                <td>Symbiosis (Pune/Noida)</td>
+                <td><span class="pattern-tag">General English, Quant, Reasoning, GK</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 25px; padding: 15px; background: rgba(248, 250, 252, 0.05); border-radius: 8px;">
+        <h4 style="color: #f8fafc; margin-bottom: 10px;">Arts Entrance Test Pattern Breakdown:</h4>
+        <ul style="font-size: 13px; color: #cbd5e1; line-height: 1.8;">
+            <li><strong>General Test (GT):</strong> Zyada tar exams mein current affairs, history, geography, aur basic GK puchi jati hai.</li>
+            <li><strong>Language Proficiency:</strong> English vocabulary, grammar, aur reading comprehension har Arts exam ka major part hai.</li>
+            <li><strong>Logical Reasoning:</strong> Puzzles, patterns aur analytical thinking skills check ki jati hain.</li>
+            <li><strong>Domain Subjects:</strong> Kuch exams mein Class 12th ke subjects (History, Pol. Science, Sociology) ka depth test hota hai.</li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .silver-panel {
+        background: rgba(192, 192, 192, 0.03);
+        border: 1px solid rgba(192, 192, 192, 0.2);
+        padding: 25px;
+        border-radius: 12px;
+        color: #e2e8f0;
+    }
+    .text-silver { color: #c0c0c0 !important; }
+    .hm-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .hm-table th { color: #c0c0c0; border-bottom: 2px solid #c0c0c0; padding: 12px; text-align: left; }
+    .hm-table td { color: #cbd5e1; border-bottom: 1px solid rgba(192, 192, 192, 0.1); padding: 12px; }
+    .hm-tag { font-size: 11px; background: rgba(192, 192, 192, 0.1); padding: 3px 6px; border-radius: 4px; border: 1px solid #c0c0c0; color: #c0c0c0; }
+</style>
+
+<div class="section-title" style="border-left: 4px solid #c0c0c0; color: #c0c0c0; margin-top: 50px;">
+    Hotel Management Entrance Matrix
+</div>
+
+<div class="silver-panel">
+    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+        Hotel Management entrances (jaise NCHMCT JEE) mein aapki **service aptitude** check ki jati hai. Isme theoretical knowledge se zyada aapki "Service Attitude" (aap customer ko kaise handle karenge) aur logical speed check hoti hai. Top institutes (IHM Pusa/Mumbai) ke liye competitive score bahut zaroori hai.
+    </p>
+
+    <table class="hm-table">
+        <thead>
+            <tr>
+                <th>Entrance Exam</th>
+                <th>Target Institution</th>
+                <th>Test Pattern (Core Sections)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-silver"><strong>NCHMCT JEE</strong></td>
+                <td>Central/State IHMs (Premier)</td>
+                <td><span class="hm-tag">English, Reasoning, Service Aptitude, GK, Maths</span></td>
+            </tr>
+            <tr>
+                <td class="text-silver"><strong>IIHM eCHAT</strong></td>
+                <td>IIHM Campuses (Global Degrees)</td>
+                <td><span class="hm-tag">Verbal, Reasoning, GA, Service Aptitude</span></td>
+            </tr>
+            <tr>
+                <td class="text-silver"><strong>AIMA UGAT</strong></td>
+                <td>Various Private HM Colleges</td>
+                <td><span class="hm-tag">English, Reasoning, Data Analysis, GK</span></td>
+            </tr>
+            <tr>
+                <td class="text-silver"><strong>PUNJAB JET</strong></td>
+                <td>Punjab Institutes</td>
+                <td><span class="hm-tag">English, Hospitality Aptitude</span></td>
+            </tr>
+            <tr>
+                <td class="text-silver"><strong>MAH-HM-CET</strong></td>
+                <td>Maharashtra HM Colleges</td>
+                <td><span class="hm-tag">Reasoning, English, GK, Service Attitude</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 25px; padding: 15px; background: rgba(192, 192, 192, 0.05); border-radius: 8px;">
+        <h4 style="color: #c0c0c0; margin-bottom: 10px;">Entrance Test Pattern Breakdown:</h4>
+        <ul style="font-size: 13px; color: #cbd5e1; line-height: 1.8;">
+            <li><strong>Service Aptitude:</strong> Yeh HM exams ka sabse unique section hai. Isme real-life situational questions hote hain (e.g., "Agar guest gusse mein hai toh aap kya karenge?").</li>
+            <li><strong>Numerical Ability:</strong> Basic 10th level Maths, percentage, aur ratios.</li>
+            <li><strong>Reasoning & Logical Deduction:</strong> Series completion, coding-decoding, aur data sufficiency.</li>
+            <li><strong>English & Communication:</strong> Comprehension passages aur grammar.</li>
+            <li><strong>Current Affairs & GK:</strong> Majorly hospitality industry, travel, aur world events related.</li>
+        </ul>
+    </div>
+</div>
+
+
+<style>
+    .emerald-panel {
+        background: rgba(16, 185, 129, 0.03);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        padding: 25px;
+        border-radius: 12px;
+        color: #e2e8f0;
+    }
+    .text-emerald { color: #10b981 !important; }
+    .lib-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .lib-table th { color: #10b981; border-bottom: 2px solid #10b981; padding: 12px; text-align: left; }
+    .lib-table td { color: #cbd5e1; border-bottom: 1px solid rgba(16, 185, 129, 0.1); padding: 12px; }
+    .lib-tag { font-size: 11px; background: rgba(16, 185, 129, 0.1); padding: 3px 6px; border-radius: 4px; border: 1px solid #10b981; color: #10b981; }
+</style>
+
+<div class="section-title" style="border-left: 4px solid #10b981; color: #10b981; margin-top: 50px;">
+    Liberal Arts & Liberal Studies Overview
+</div>
+
+<div class="emerald-panel">
+    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+        Liberal Arts program ka structure "Major-Minor" system par hota hai. Yahan aap apni pasand ke subjects (jaise Economics Major aur Psychology Minor) chun sakte hain. Yeh career-focused hone ke bajaye "Intellectual-focused" hai, jo aapko problem-solving aur versatile perspective deta hai.
+    </p>
+
+    <table class="lib-table">
+        <thead>
+            <tr>
+                <th>Entrance / Admission Path</th>
+                <th>Target Institution</th>
+                <th>Core Selection Process (Pattern)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-emerald"><strong>ASHOKA Aptitude (AAT)</strong></td>
+                <td>Ashoka University (Sonipat)</td>
+                <td><span class="lib-tag">Assessment, Essay, Personal Interview</span></td>
+            </tr>
+            <tr>
+                <td class="text-emerald"><strong>FLAME Entrance</strong></td>
+                <td>FLAME University (Pune)</td>
+                <td><span class="lib-tag">FEAT (Logical, Verbal, Quant, GK)</span></td>
+            </tr>
+            <tr>
+                <td class="text-emerald"><strong>KREA Admission</strong></td>
+                <td>Krea University (Andhra)</td>
+                <td><span class="lib-tag">KIC (Multi-stage evaluation)</span></td>
+            </tr>
+            <tr>
+                <td class="text-emerald"><strong>SNUSAT</strong></td>
+                <td>Shiv Nadar University</td>
+                <td><span class="lib-tag">Critical Thinking, Aptitude, Writing</span></td>
+            </tr>
+            <tr>
+                <td class="text-emerald"><strong>OP Jindal (JSAT)</strong></td>
+                <td>Jindal School of Liberal Arts</td>
+                <td><span class="lib-tag">Logical, Verbal, Quantitative</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 25px; padding: 15px; background: rgba(16, 185, 129, 0.05); border-radius: 8px;">
+        <h4 style="color: #10b981; margin-bottom: 10px;">Entrance Test Pattern Breakdown:</h4>
+        <ul style="font-size: 13px; color: #cbd5e1; line-height: 1.8;">
+            <li><strong>Critical Thinking & Holistic Assessment:</strong> Liberal arts exams mein sirf score nahi, balki aapka "Thinking Process" check hota hai.</li>
+            <li><strong>Writing/Essay Tasks:</strong> Aapko social ya philosophical topics par apne views likhne hote hain (e.g., "Impact of AI on Human Culture").</li>
+            <li><strong>Interview Round:</strong> Yeh sabse crucial stage hai, jahan aapke passion aur academic curiosity ko evaluate kiya jata hai.</li>
+            <li><strong>Standard Aptitude:</strong> Basic logic, English (reading comprehension), aur Quant (data analysis).</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<style>
+    .purple-panel {
+        background: rgba(168, 85, 247, 0.03);
+        border: 1px solid rgba(168, 85, 247, 0.2);
+        padding: 25px;
+        border-radius: 12px;
+        color: #e2e8f0;
+    }
+    .text-purple { color: #a855f7 !important; }
+    .media-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .media-table th { color: #a855f7; border-bottom: 2px solid #a855f7; padding: 12px; text-align: left; }
+    .media-table td { color: #cbd5e1; border-bottom: 1px solid rgba(168, 85, 247, 0.1); padding: 12px; }
+    .media-tag { font-size: 11px; background: rgba(168, 85, 247, 0.1); padding: 3px 6px; border-radius: 4px; border: 1px solid #a855f7; color: #a855f7; }
+</style>
+
+<div class="section-title" style="border-left: 4px solid #a855f7; color: #a855f7; margin-top: 50px;">
+    Mass Communication & Media Entrance Matrix
+</div>
+
+<div class="purple-panel">
+    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+        Media entrance exams mainly aapki "Communication Awareness" aur "Worldview" check karte hain. Journalism mein career banane ke liye aapko sirf likhna nahi, balki editing, broadcasting, aur ethical decision-making ki samajh honi chahiye.
+    </p>
+
+    <table class="media-table">
+        <thead>
+            <tr>
+                <th>Entrance / Exam</th>
+                <th>Target Institution</th>
+                <th>Test Pattern (Core Sections)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-purple"><strong>CUET-UG (Mass Comm)</strong></td>
+                <td>Central Universities (JMI, IPU, etc.)</td>
+                <td><span class="media-tag">English, Domain (Mass Media), GT</span></td>
+            </tr>
+            <tr>
+                <td class="text-purple"><strong>IIMC Entrance</strong></td>
+                <td>Indian Institute of Mass Comm.</td>
+                <td><span class="media-tag">GK, Media Awareness, Language</span></td>
+            </tr>
+            <tr>
+                <td class="text-purple"><strong>FTII JET</strong></td>
+                <td>Film & Television Institute (Pune)</td>
+                <td><span class="media-tag">Film Aptitude, Aesthetics, GK</span></td>
+            </tr>
+            <tr>
+                <td class="text-purple"><strong>XIC Entrance</strong></td>
+                <td>Xavier Inst. of Comm. (Mumbai)</td>
+                <td><span class="media-tag">Media Aptitude, Creative Writing</span></td>
+            </tr>
+            <tr>
+                <td class="text-purple"><strong>Symbiosis (SET)</strong></td>
+                <td>SCMC (Pune)</td>
+                <td><span class="media-tag">Media, English, Reasoning, GK</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 25px; padding: 15px; background: rgba(168, 85, 247, 0.05); border-radius: 8px;">
+        <h4 style="color: #a855f7; margin-bottom: 10px;">Entrance Test Pattern Breakdown:</h4>
+        <ul style="font-size: 13px; color: #cbd5e1; line-height: 1.8;">
+            <li><strong>Media Awareness:</strong> Television, Cinema, Print Media, aur Digital Trends ki knowledge.</li>
+            <li><strong>Language & Creative Writing:</strong> Blog posts, feature writing, ya ad-copy likhne ki capability.</li>
+            <li><strong>Logical Reasoning:</strong> Media puzzles aur analytical problem-solving.</li>
+            <li><strong>Current Affairs:</strong> Latest news, political landscape, aur social issues ka deep understanding.</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<style>
+    .lightgreen-panel {
+        background: rgba(74, 222, 128, 0.03);
+        border: 1px solid rgba(74, 222, 128, 0.2);
+        padding: 25px;
+        border-radius: 12px;
+        color: #e2e8f0;
+    }
+    .text-lightgreen { color: #4ade80 !important; }
+    .pa-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .pa-table th { color: #4ade80; border-bottom: 2px solid #4ade80; padding: 12px; text-align: left; }
+    .pa-table td { color: #cbd5e1; border-bottom: 1px solid rgba(74, 222, 128, 0.1); padding: 12px; }
+    .pa-tag { font-size: 11px; background: rgba(74, 222, 128, 0.1); padding: 3px 6px; border-radius: 4px; border: 1px solid #4ade80; color: #4ade80; }
+</style>
+
+<div class="section-title" style="border-left: 4px solid #4ade80; color: #4ade80; margin-top: 50px;">
+    Performing Arts (BPA) Entrance Matrix
+</div>
+
+<div class="lightgreen-panel">
+    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+        Performing Arts (BPA in Dance, Music, Theatre) un students ke liye hai jo stage aur performance ko apna career banana chahte hain. Is field ke entrance exams baaki sabhi exams se bilkul alag hote hain kyunki isme <strong>"Live Audition"</strong> aur <strong>"Skill Demonstration"</strong> ka weightage written test se kahin zyada hota hai.
+    </p>
+
+    <table class="pa-table">
+        <thead>
+            <tr>
+                <th>Entrance / Admission Path</th>
+                <th>Target Institution</th>
+                <th>Core Selection Process (Pattern)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-lightgreen"><strong>CUET-UG (Performing Arts)</strong></td>
+                <td>Central Univ. (DU, BHU, Visva-Bharati)</td>
+                <td><span class="pa-tag">Domain Theory + Practical Audition</span></td>
+            </tr>
+            <tr>
+                <td class="text-lightgreen"><strong>MSU Baroda BPA Entrance</strong></td>
+                <td>Maharaja Sayajirao University</td>
+                <td><span class="pa-tag">Written Test + Stage Performance</span></td>
+            </tr>
+            <tr>
+                <td class="text-lightgreen"><strong>BHU UET (BPA)</strong></td>
+                <td>Banaras Hindu University</td>
+                <td><span class="pa-tag">Music/Dance Theory + Vocal/Instrumental Test</span></td>
+            </tr>
+            <tr>
+                <td class="text-lightgreen"><strong>RBU Entrance Test</strong></td>
+                <td>Rabindra Bharati University (Kolkata)</td>
+                <td><span class="pa-tag">Practical Evaluation + Subject Viva</span></td>
+            </tr>
+            <tr>
+                <td class="text-lightgreen"><strong>State/Private Univ Auditions</strong></td>
+                <td>SNDT, Christ Univ, NMIMS (SOPA)</td>
+                <td><span class="pa-tag">Portfolio + Live Audition + Interview</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 25px; padding: 15px; background: rgba(74, 222, 128, 0.05); border-radius: 8px;">
+        <h4 style="color: #4ade80; margin-bottom: 10px;">Entrance Test Pattern Breakdown:</h4>
+        <ul style="font-size: 13px; color: #cbd5e1; line-height: 1.8;">
+            <li><strong>Practical Audition (Most Important):</strong> Yeh sabse bada round hota hai jahan aapko panel ke saamne live gaana (vocal), instrument bajana, classical/western dance karna, ya acting monologue present karna hota hai.</li>
+            <li><strong>Theory & Cultural History:</strong> Written exam (MCQ based) mein Indian classical music ke gharane, ragas, taals, folk dances, aur natya shastra ki basic history puchi jati hai.</li>
+            <li><strong>Portfolio & Viva-Voce:</strong> Aapke past stage performances ke certificates, YouTube/social media links, aur ek personal interview jahan aapka passion aur discipline judge kiya jata hai.</li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .orange-panel {
+        background: rgba(249, 115, 22, 0.03);
+        border: 1px solid rgba(249, 115, 22, 0.2);
+        padding: 25px;
+        border-radius: 12px;
+        color: #e2e8f0;
+    }
+    .text-orange { color: #f97316 !important; }
+    .sports-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .sports-table th { color: #f97316; border-bottom: 2px solid #f97316; padding: 12px; text-align: left; }
+    .sports-table td { color: #cbd5e1; border-bottom: 1px solid rgba(249, 115, 22, 0.1); padding: 12px; }
+    .sports-tag { font-size: 11px; background: rgba(249, 115, 22, 0.1); padding: 3px 6px; border-radius: 4px; border: 1px solid #f97316; color: #f97316; }
+</style>
+
+<div class="section-title" style="border-left: 4px solid #f97316; color: #f97316; margin-top: 50px;">
+    Physical Education & Sports (B.P.Ed/B.Sc) Entrance Matrix
+</div>
+
+<div class="orange-panel">
+    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+        Sports ya Physical Education mein career banane ke liye aapka physical fitness level top-notch hona chahiye. Inke entrance exams mein written test se zyada weightage <strong>Physical Fitness Test</strong> aur aapke past <strong>Sports Achievements (State/National level certificates)</strong> ko diya jata hai.
+    </p>
+
+    <table class="sports-table">
+        <thead>
+            <tr>
+                <th>Entrance / Admission Path</th>
+                <th>Target Institution</th>
+                <th>Test Pattern (Core Sections)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-orange"><strong>CUET-UG (Physical Ed.)</strong></td>
+                <td>Central Univ. (IGIPESS - Delhi Univ, BHU)</td>
+                <td><span class="sports-tag">Written Domain + Physical Fitness Test</span></td>
+            </tr>
+            <tr>
+                <td class="text-orange"><strong>LNIPE Entrance Test</strong></td>
+                <td>Lakshmibai National Inst. of Physical Ed (Gwalior)</td>
+                <td><span class="sports-tag">Written + Sports Skill Test (60% Weightage)</span></td>
+            </tr>
+            <tr>
+                <td class="text-orange"><strong>MAH-B.P.Ed.-CET</strong></td>
+                <td>Maharashtra State Colleges</td>
+                <td><span class="sports-tag">Online Test + Field/Ground Test</span></td>
+            </tr>
+            <tr>
+                <td class="text-orange"><strong>SGSU Admission</strong></td>
+                <td>Swarnim Gujarat Sports University</td>
+                <td><span class="sports-tag">Sports Certificates + Physical Trials</span></td>
+            </tr>
+            <tr>
+                <td class="text-orange"><strong>State Univ. Entrances</strong></td>
+                <td>Various State Universities (PU, MDU, etc.)</td>
+                <td><span class="sports-tag">Aptitude Test + Fitness Evaluation</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 25px; padding: 15px; background: rgba(249, 115, 22, 0.05); border-radius: 8px;">
+        <h4 style="color: #f97316; margin-bottom: 10px;">Entrance Test Pattern Breakdown:</h4>
+        <ul style="font-size: 13px; color: #cbd5e1; line-height: 1.8;">
+            <li><strong>Physical Fitness Test (Field Test):</strong> Yeh sabse crucial round hai. Isme sprints (e.g., 50m dash), endurance runs (600m), shot put, aur broad jump jaise tests hote hain.</li>
+            <li><strong>Sports Skill/Proficiency Test:</strong> Aap jis specific game (Cricket, Football, Athletics, etc.) se apply kar rahe hain, uski ground skills evaluate ki jati hain.</li>
+            <li><strong>Written Test:</strong> Sports GK, Olympics history, basic human anatomy, health education, aur general logical reasoning puchi jati hai.</li>
+            <li><strong>Sports Certificates:</strong> Agar aapne District, State, ya National level par khela hai, toh uske direct bonus points judte hain final merit list mein.</li>
+        </ul>
+    </div>
+</div>
