@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUET 2026 Centralized Counselling Tracker (Central university) | PathNova</title>
+    <style>
+        /* Base Styling & Brand Colors */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #e2e8f0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .tracker-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        .tracker-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .tracker-header h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .tracker-header h1 span {
+            color: #38bdf8; /* Accent Color */
+        }
+
+        .tracker-header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        /* Live Notification Badge */
+        .live-indicator {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(34, 197, 94, 0.1);
+            color: #4ade80;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .dot {
+            height: 8px;
+            width: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 10px #22c55e;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+
+        /* Responsive Table Wrapper */
+        .table-responsive {
+            overflow-x: auto;
+            background: #111827;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 700px;
+        }
+
+        th {
+            background-color: #1f2937;
+            color: #38bdf8;
+            padding: 16px 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+        }
+
+        td {
+            padding: 16px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            vertical-align: middle;
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Status Badges */
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .status-upcoming {
+            background-color: rgba(234, 179, 8, 0.1);
+            color: #eab308;
+            border: 1px solid rgba(234, 179, 8, 0.2);
+        }
+
+        .status-live {
+            background-color: rgba(34, 197, 94, 0.1);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .status-closed {
+            background-color: rgba(239, 68, 68, 0.1);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        /* Action Button */
+        .apply-btn {
+            display: inline-block;
+            background-color: #0077b5;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .apply-btn:hover {
+            background-color: #38bdf8;
+            color: #0b0f19;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+
+        .disabled-btn {
+            background-color: #374151;
+            color: #9ca3af;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        /* Note Section */
+        .tracker-note {
+            margin-top: 25px;
+            background: rgba(56, 189, 248, 0.05);
+            border-left: 4px solid #38bdf8;
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .tracker-header h1 {
+                font-size: 2rem;
+            }
+            td, th {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tracker-container">
+        
+        <div class="tracker-header">
+            <div class="live-indicator">
+                <span class="dot"></span> Live 2026 Tracker
+            </div>
+            <h1>CUET Centralized <span>Counselling Tracker</span></h1>
+            <p>Don't miss deadlines. Track all major University Registration Portals & Official Links in one place.</p>
+        </div>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+    <td><strong>Aligarah Muslim university</strong><br><small style="color: #64748b;">[UP]</small></td>
+    <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>
+
+<tr>
+    <td><strong>Assam University</strong><br><small style="color: #64748b;">Central | Silchar, Assam</small></td>
+    <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>
+
+<tr>
+    <td><strong>Babasaheb Bimrao Ambedkar university</strong><br><small style="color: #64748b;">[Lucknow]</small></td>
+      <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>  
+
+<tr>
+    <td><strong>Banaras Hindu University</strong><br><small style="color: #64748b;">Central | Varanasi, UP</small></td>
+    <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>
+
+<tr>
+    <td><strong>Central Sanskrit University</strong><br><small style="color: #64748b;">Central | New  Delhi </small></td>
+    <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>
+
+<tr>
+    <td><strong>Central Tripal University of andhra pradesh</strong><br><small style="color: #64748b;">Central | Bathinda, Punjab</small></td>
+    <td><span class="status-badge status-upcoming">Upcoming</spanUniversity
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>
+
+<tr>
+    <td><strong>Central University of Gujarat</strong><br><small style="color: #64748b;">Central | Mahendergarh, Haryana</small></td>
+    <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>
+
+<tr>
+    <td><strong>Central University of Haryana</strong><br><small style="color: #64748b;">Central | Haryana</small></td>
+    <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>
+
+<tr>
+    <td><strong>Central University of Himachal Pradesh</strong><br><small style="color: #64748b;">State | Delhi NCR (CUET/CET Based)</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr> 
+
+<tr>
+    <td><strong>Central University of Jammu</strong><br><small style="color: #64748b;">Central |  J&K</small></td>
+<td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>    
+<tr>
+    <td><strong>Central University of Jharkhand
+    
+   </strong><br><small style="color: #64748b;">Central | Ranchi, Jharkhand</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>      
+
+<tr>
+    <td><strong>Central University of Karnataka</strong><br><small style="color: #64748b;">Short Info Central | Karnataka</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>       
+
+<tr>
+    <td><strong>Central University of Kashmir</strong><br><small style="color: #64748b;">Central</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>        
+
+   <tr>
+    <td><strong>Central University of Kerala</strong><br><small style="color: #64748b;">Kasaragod,Kerala</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>        
+  
+  
+  <tr>
+    <td><strong>Central University of Odisha</strong><br><small style="color: #64748b;"> Sunabeda,near Koraput</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>       
+
+ <tr>
+    <td><strong> Central University of Punjab
+   </strong><br><small style="color: #64748b;">Bathinda,Punjab</small></td>
+<td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>            
+
+  <tr>
+    <td><strong>Central University of Rajasthan </strong><br><small style="color: #64748b;">Bandar Sindri</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>          
+<tr>
+    <td><strong>Central University of South Bihar </strong><br><small style="color: #64748b;">Gaya ji,Bihar</small></td>
+   <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>           
+
+<tr>
+    <td><strong>Central University of Tamil Nadu
+     </strong><br><small style="color: #64748b;">Thiruvarur</small></td>
+ <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>           
+   
+<tr>
+    <td><strong>Dr.Harisungh Gour Vishwavidyalaya</strong><br><small style="color: #64748b;">Bilaspur,Chhatisgarh</small></td> 
+<td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>        
+
+<tr>
+    <td><strong>Hemvati Nandan Bahuguna Garhwal University</strong><br><small style="color: #64748b;">Srinagar</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>          
+
+
+<tr>
+    <td><strong>IIT Dharwad </strong><br><small style="color: #64748b;">Karnataka</small></td>
+  
+   <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>  
+
+<tr>
+    <td><strong>Indhra Gandhi National Tribal University </strong><br><small style="color: #64748b;">Amarkantak,(MP)</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>  
+ 
+<tr>
+    <td><strong>Jamia Millia Islamia </strong><br><small style="color: #64748b;">New Delhi</small></td>
+   <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>   
+
+
+ 
+<tr>
+    <td><strong>Jawaharlal Nehru University </strong><br><small style="color: #64748b;">New Delhi</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>     
+
+ <tr>
+    <td><strong>Mahatma Gandhi Antarrashriya Hindhi Vishwavidyalaya</strong><br><small style="color: #64748b;">Wardha ,Maharashtra</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>       
+ 
+ 
+
+<tr>
+    <td><strong>Mahatma Gandhi Central University</strong><br><small style="color: #64748b;">Motihari,Bihar</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>         
+
+<tr>
+    <td><strong>Manipur University</strong><br><small style="color: #64748b;">Canchipur</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>        
+
+
+<tr>
+    <td><strong>Maulana Azad National urdu university</strong><br><small style="color: #64748b;">Hyderabad,Telangana</small></td>
+   <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>     
+
+ <tr>
+    <td><strong>Mizoram University</strong><br><small style="color: #64748b;">Aizwal</small></td>
+   <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>      
+ 
+<tr>
+    <td><strong>Nagaland University</strong><br><small style="color: #64748b;"> Cental</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>        
+<tr>
+    <td><strong>Central University of andhra pradesh</strong><br><small style="color: #64748b;">Ananthapuramu</small></td>
+    <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>    
+<tr>
+    <td><strong>National sanskrit University</strong><br><small style="color: #64748b;">Tirupati,Andhra Pradesh</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>          
+
+<tr>
+    <td><strong>North-Eastern Hill University</strong><br><small style="color: #64748b;">Shilong</small></td>
+   <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>           
+
+
+<tr>
+    <td><strong>Pondicherry University</strong><br><small style="color: #64748b;">  Kalapet</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>         
+
+<tr>
+    <td><strong>Rajiv Gandhi National aviation University </strong><br><small style="color: #64748b;">Fursatganj,UP</small></td>
+ <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>         
+
+ <tr>
+    <td><strong>Rajiv Gandhi University</strong><br><small style="color: #64748b;">Doimukh ,Arunachal Pradesh</small></td>
+ <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>        
+
+<td><strong>Sammakka sarakka central tribal university</strong><br><small style="color: #64748b;">Mulugu,Telangana</small></td>
+   <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>         
+
+
+ <td>
+     <strong>Sikkim University</strong><br><small style="color: #64748b;">New Delhi</small></td>
+   <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>        
+
+ <td>
+     <strong>Shri lal Bahadur Shastri National sanskrit University</strong><br><small style="color: #64748b;">New Delhi</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>          
+
+<td>
+     <strong>South Asian University</strong><br><small style="color: #64748b;">New Delhi</small></td>
+    
+<td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>      
+
+<td>
+     <strong>Tezpur University</strong><br><small style="color: #64748b;">Assam</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>        
+
+<td>
+     <strong>The English and forign languages university</strong><br><small style="color: #64748b;">Hyderabad</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>        
+
+<td>
+     <strong>Tripura University</strong><br><small style="color: #64748b;">Agartala</small></td>
+   <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>     
+
+ 
+ <td>
+<strong>University of Allahabad</strong><br><small style="color: #64748b;">Prayagraj</small></td>
+  <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>       
+
+<td>
+<strong>University of Delhi (DU)</strong><br><small style="color: #64748b;">New Delhi</small></td>
+   <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>      
+
+
+ <tr>
+ <td><strong>University of Hyderabad</strong><br><small style="color: #64748b;">Gachibowli</small></td>
+   <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>        
+
+<tr>
+    <td><strong>Visva - Bharti University</strong><br><small style="color: #64748b;">Santiniketam ,West Bengal</small></td>
+    <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>        
+ 
+ <tr>
+    <td><strong>Guru Ghasidas Vishwavidhalay</strong><br><small style="color: #64748b;">Bilaspur,Chhatisgarah</small></td>
+    <td><span class="status-badge status-upcoming">Upcoming</span></td>
+    <td>To Be Announced</td>
+    <td><a href="#" class="apply-btn disabled-btn">Link Opens Soon</a></td>
+</tr>      
+  
+
+    <class="tracker-note">
+            <strong>📌 Note for Students:</strong> Portal status change hote hi hum yahan direct link update kar denge. Make sure to bookmark this page and check daily so you don't miss any seat allocation rounds!
+        </div>
+
+    </div>
+
+</body>
+</html>
