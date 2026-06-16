@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition & Opportunity Alerts - My PathNova</title>
+    <style>
+        /* --- Base & New Artwork Background Setup --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* Using your chosen background image verbatim */
+            background: url('competition.png') no-repeat center top fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #FFFFFF; /* Pure White Text */
+            min-height: 100vh;
+            /* Pushes cards down to the starry empty sky area to keep top artwork visible */
+            padding-top: 48vh; 
+            padding-bottom: 50px;
+        }
+
+        .main-wrapper {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Top Instagram Alert Banner (Fully Tappable) --- */
+        .insta-banner {
+            background: rgba(15, 23, 42, 0.75); /* Dark tint overlay for high contrast */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(247, 231, 169, 0.25); /* Subtle Cream border tint */
+            border-radius: 14px;
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .insta-text {
+            font-size: 14px;
+            color: #FFFFFF; /* Pure White */
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .insta-btn {
+            background: #F7e7a9; /* Cream color background */
+            color: #0F172A; /* Dark text for crystal clear visibility */
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(247, 231, 169, 0.2);
+        }
+
+        .insta-btn:hover {
+            background: #FFFFFF; /* Shifts to Pure White on hover */
+            transform: translateY(-1px);
+        }
+
+        /* --- Navigation Section --- */
+        .nav-section {
+            margin-bottom: 25px;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            color: #F7e7a9; /* Cream navigation link */
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid rgba(247, 231, 169, 0.3);
+            transition: all 0.2s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .back-home-btn:hover {
+            background: #F7e7a9;
+            color: #0F172A;
+            transform: scale(1.03);
+        }
+
+        /* --- Main Dual Columns Layout --- */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* --- Left Feature Accent Card --- */
+        .feature-card {
+            background: rgba(15, 23, 42, 0.8); /* Dark tint glass shield */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .welcome-tag {
+            background: rgba(247, 231, 169, 0.15);
+            color: #F7e7a9; /* Cream Accent Tag */
+            border: 1px solid rgba(247, 231, 169, 0.3);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            align-self: flex-start;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .feature-title {
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: #FFFFFF; /* Pure White */
+        }
+
+        .feature-desc {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8); /* Highly visible soft white description */
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .action-showcase-box {
+            background: linear-gradient(135deg, rgba(247, 231, 169, 0.2), rgba(15, 23, 42, 0.4));
+            border: 1px solid rgba(247, 231, 169, 0.4);
+            border-radius: 14px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .trophy-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .action-box-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #F7e7a9; /* Cream Title */
+            margin-bottom: 5px;
+        }
+
+        .action-box-sub {
+            font-size: 12px;
+            color: #FFFFFF; /* Pure White */
+            opacity: 0.9;
+        }
+
+        /* --- Right Categories Tappable Grid --- */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            align-content: start;
+        }
+
+        /* Category Card Wrapper as Anchor Link */
+        .category-item-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .category-card {
+            background: rgba(15, 23, 42, 0.75); /* Protects text contrast from star background */
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 22px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-card:hover {
+            background: rgba(247, 231, 169, 0.15); /* Soft cream glowing blend on hover */
+            border-color: #F7e7a9; /* Cream Border Glow */
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(247, 231, 169, 0.25);
+        }
+
+        .category-icon {
+            font-size: 26px;
+        }
+
+        .category-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #FFFFFF; /* Pure White Heading */
+        }
+
+        /* Custom Highlighted Photography Card */
+        .photography-highlight {
+            border: 1px solid rgba(247, 231, 169, 0.6) !important;
+        }
+        .photography-highlight .category-title {
+            color: #F7e7a9; /* Stands out immediately in Cream */
+        }
+
+        /* --- Bottom Feedback Section --- */
+        .feedback-container {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(247, 231, 169, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 35px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+        }
+
+        .feedback-heading {
+            font-size: 22px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #F7e7a9; /* Cream Heading */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85); /* Pure white with high opacity */
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .form-select, .form-textarea {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: #FFFFFF; /* Pure White input entry */
+            padding: 12px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-select:focus, .form-textarea:focus {
+            border-color: #F7e7a9; /* Shifts to Cream on selection focus */
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .submit-btn {
+            background: #F7e7a9; /* Cream Button */
+            color: #0F172A; /* High readability dark text */
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(247, 231, 169, 0.25);
+        }
+
+        .submit-btn:hover {
+            background: #FFFFFF; /* White Glow */
+            transform: translateY(-1px);
+        }
+
+        /* --- Responsive Viewports --- */
+        @media (max-width: 850px) {
+            body {
+                padding-top: 38vh; /* Adjusted dynamically for mobile visibility screen space */
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .categories-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+
+        <!-- Top Instagram Banner (Fully Tappable) -->
+        <div class="insta-banner">
+            <div class="insta-text">
+                <span>📸</span> Get Instant results, winner updates & upcoming alerts on our Instagram!
+            </div>
+            <a href="https://instagram.com/pathnova.official" target="_blank" class="insta-btn">Follow @pathnova.official</a>
+        </div>
+
+        <!-- Back Navigation Button -->
+        <div class="nav-section">
+            <a href="index.html" class="back-home-btn">← BACK TO HOME</a>
+        </div>
+
+        <!-- Main Workspace Area over the Purple Stars Sky -->
+        <div class="content-grid">
+            
+            <!-- Left Promo Card Layout -->
+            <div class="feature-card">
+                <div>
+                    <div class="welcome-tag">Welcome to PathNova ✨</div>
+                    <h2 class="feature-title">Explore Opportunities by Field</h2>
+                    <p class="feature-desc">Select your creative or professional domain to view active listings. Find the best student competitions, workshops, and awards customized just for you.</p>
+                </div>
+                <div class="action-showcase-box">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="action-box-title">Shape Your Future</div>
+                    <div class="action-box-sub">Connect · Compete · Achieve</div>
+                </div>
+            </div>
+
+            <!-- Right Interactive Grid (Futuristic & Equal Sizes) -->
+            <div class="categories-grid">
+
+                <a href="arts_competitions.html" class="category-item-link">
+                    <div class="category-card">
+                        <div class="category-icon">🎨</div>
+                        <div class="category-title">Art and design</div>
+                    </div>
+                </a>
+
+                <a href="music_competitions.html" class="category-item-link">
+                    <div class="category-card">
+                        <div class="category-icon">🎵</div>
+                        <div class="category-title">Music</div>
+                    </div>
+                </a>
+
+                <a href="graphic_design.html" class="category-item-link">
+                    <div class="category-card">
+                        <div class="category-icon">💻</div>
+                        <div class="category-title">Graphic design</div>
+                    </div>
+                </a>
+
+                <a href="graphic_design.html" class="category-item-link">
+                    <div class="category-card">
+                        <div class="category-icon">✍️</div>
+                        <div class="category-title">Poetry</div>
+                    </div>
+                </a>
+
+                <a href="poetry.html" class="category-item-link">
+                    <div class="category-card">
+                        <div class="category-icon">📖</div>
+                        <div class="category-title">Story telling</div>
+                    </div>
+                </a>
+
+                <a href="#" class="category-item-link">
+                    <div class="category-card">
+                        <div class="category-icon">📝</div>
+                        <div class="category-title">Writing</div>
+                    </div>
+                </a>
+
+                <a href="#" class="category-item-link">
+                    <div class="category-card">
+                        <div class="category-icon">💃</div>
+                        <div class="category-title">Dance</div>
+                    </div>
+                </a>
+
+                <!-- Photography Event Section (Directly Tappable & Styled with Cream Highlights) -->
+                <a href="photography.html" class="category-item-link">
+                    <div class="category-card photography-highlight">
+                        <div class="category-icon">📷</div>
+                        <div class="category-title">Photography event</div>
+                    </div>
+                </a>
+
+                <a href="#" class="category-item-link">
+                    <div class="category-card">
+                        <div class="category-icon">🎬</div>
+                        <div class="category-title">Reel content</div>
+                    </div>
+                </a>
+
+                <a href="#" class="category-item-link">
+                    <div class="category-card">
+                        <div class="category-icon">🏆</div>
+                        <div class="category-title">Sports</div>
+                    </div>
+                </a>
+
+                <a href="#" class="category-item-link">
+                    <div class="category-card">
+                        <div class="category-icon">💼</div>
+                        <div class="category-title">Business</div>
+                    </div>
+                </a>
+
+            </div> <!-- Grid End -->
+
+        </div>
+
+        <!-- Bottom Feedback Block (Glassmorphism over Galaxy Backdrop) -->
+        <div class="feedback-container">
+            <h3 class="feedback-heading">Help Us Improve PathNova! 🚀</h3>
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSfxGAqP1B-DTnc2z38nydW1dlgAv4FcTPspdKzNV_KcoxzmUg/viewform?usp=dialog" method="GET"
+  target="_blank">
+                <div class="form-group">
+                    <label class="form-label">1. PathNova ke baare mein aapko kahan se pata chala? (Where did you hear about us?)</label>
+                    <select class="form-select">
+                        <option value="" disabled selected>Choose an option</option>
+                        <option value="youtube">YouTube</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="friends">Friends / College</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">2. What additional resources or features would you like PathNova to provide for students?</label>
+                    <textarea class="form-textarea" placeholder="Write your ideas here (e.g., Mock tests, free courses, internships...)"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+ 
