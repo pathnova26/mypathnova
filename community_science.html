@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Sc (Hons) Community Science</title>
+    <style>
+        /* --- Base & Responsiveness Settings --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* Background image linked to community.jpg with a premium blue fallback gradient */
+            background: url('community.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #E0F0FF; 
+            color: #134E4A; /* ✅ Primary Dark Teal Text Color */
+            font-size: 20px; /* ✅ Thoda bada text size as requested */
+            line-height: 1.8;
+            padding: 40px 6%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Navigation / Back Button --- */
+        .top-nav {
+            margin-bottom: 30px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: #134E4A;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 8px 16px;
+            border: 2px solid #134E4A;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #134E4A;
+            color: #FFFFFF;
+        }
+
+        /* --- Headings Styling --- */
+        h1 {
+            font-size: 2.8rem;
+            color: #FF6B6B; /* ✅ Highlight Color Coral/Pinkish Red */
+            text-align: center;
+            margin-bottom: 50px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #FF6B6B; /* ✅ Section Headings in Coral */
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(19, 78, 74, 0.2);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #134E4A;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* --- Direct on Background Layout Structure --- */
+        .info-section {
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        /* Responsive Grid for Details & Future expansion */
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .grid-item {
+            padding: 10px 0;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #FF6B6B;
+            display: block;
+            margin-bottom: 50pxpx;
+        }
+
+        /* --- Lists Styling --- */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 14px;
+        }
+
+        ul li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: #FF6B6B;
+            font-size: 1.2rem;
+            top: -2px;
+        }
+
+        .sub-list {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+
+        .sub-list li::before {
+            content: "•";
+            color: #134E4A;
+            font-size: 1.3rem;
+            top: -1px;
+        }
+
+        /* Multi-column layout for easy reading of Gov Jobs on desktop */
+        .jobs-layout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        /* --- PCB Express Score Box --- */
+        .score-container {
+            margin-top: 60px;
+            border-top: 3px dashed #FF6B6B;
+            padding-top: 40px;
+            text-align: center;
+        }
+
+        .score-title {
+            font-size: 2.2rem;
+            color: #FF6B6B;
+            margin-bottom: 25px;
+        }
+
+        .score-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .score-badge {
+            border: 2px solid #134E4A;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.15rem;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* --- Responsive Queries for smaller screens --- */
+        @media (max-width: 900px) {
+            body {
+                font-size: 18px;
+                padding: 20px 4%;
+            }
+            .details-grid, .jobs-layout {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="express.html" class="back-btn">← Back to Express</a>
+    </div>
+
+    <h1>B.Sc. (Hons.) Community Science</h1>
+
+    <div class="info-section">
+        <div class="details-grid">
+            <div class="grid-item">
+                <span class="label">Course Name:</span>
+                <p>B.Sc (Hons) in Community Science<br><small style="opacity: 0.8;">[Previously known as B.Sc Home Science]</small></p>
+            </div>
+            <div class="grid-item">
+                <span class="label">Duration:</span>
+                <p>4 Years (8 Semesters)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h2>Eligibility Criteria</h2>
+        <ul>
+            <li><strong>Stream Requirements:</strong> PCB, PCM, or Arts streams eligibility.</li>
+            <li><strong>Minimum Marks:</strong> 50% marks required for General Category.</li>
+            <li><strong>Admission Through:</strong> 
+                <ul class="sub-list">
+                    <li>CUET (UG)</li>
+                    <li>University Entrance Exam</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="info-section">
+        <h2>Course Overview</h2>
+        <p>Community Science is a multidisciplinary course that focuses on improving the quality of life of individuals, families, and communities.</p>
+        
+        <h3>What Students Study About:</h3>
+        <ul>
+            <li>Human Nutrition</li>
+            <li>Food Science</li>
+            <li>Child Development</li>
+            <li>Resource Management & Consumer Science</li>
+            <li>Textile & Fashion</li>
+            <li>Extension Education & Communication Management</li>
+        </ul>
+    </div>
+
+    <div class="info-section">
+        <h2>Is This Course For You?</h2>
+        <p>This path is excellent if you have a keen interest or love for:</p>
+        <ul>
+            <li>Biology & Health</li>
+            <li>Working with Nutrition & Wellness</li>
+            <li>Child Development</li>
+            <li>Entrepreneurship</li>
+            <li>Creating Social Impact</li>
+        </ul>
+    </div>
+
+    <div class="info-section">
+        <h2>Skills for Best Placement</h2>
+        
+        <h3>1. Management & Designing Tools</h3>
+        <ul>
+            <li><strong>Auto CAD:</strong> Learn this software to design house maps and plan beautiful interior spaces efficiently.</li>
+        </ul>
+
+        <h3>2. Nutrition & Lab Skills</h3>
+        <ul>
+            <li><strong>Diet Planning:</strong> Utilize software and structured charts to accurately calculate calories and plan customized, specific diets for sick patients.</li>
+            <li><strong>Food Preservation:</strong> Master chemical and natural methodologies to freeze, dry, and safely pack food products to extend shelf life and prevent spoilage.</li>
+        </ul>
+
+        <h3>3. Media & Communication Skills</h3>
+        <ul>
+            <li>Audio-Visual Editing</li>
+            <li>Psychological Testing</li>
+        </ul>
+
+        <h3>4. Textile & Fashion Skills</h3>
+        <ul>
+            <li>Garment Construction</li>
+            <li>Textile Testing</li>
+        </ul>
+
+        <h3>5. Digital & Content Skills</h3>
+        <ul>
+            <li>Social Media Marketing</li>
+            <li>UI/UX Design</li>
+        </ul>
+
+        <h3>6. Professional Business Skills</h3>
+        <ul>
+            <li>Data Analysis</li>
+            <li>Grant Writing</li>
+        </ul>
+    </div>
+
+    <div class="info-section">
+        <h2>Government Job Opportunities</h2>
+        <div class="jobs-layout">
+            <div>
+                <ul>
+                    <li><strong>Gov Health & Awareness Programme:</strong> Mass Media Officer, Health Educator.</li>
+                    <li><strong>Ministry of Agriculture & Rural Development:</strong> Extension Officer, Krishi Vigyan Kendra Scientist.</li>
+                    <li><strong>Ministry of Information & Broadcasting:</strong> Gov Journalist / Reporter, Public Relations Officer.</li>
+                    <li><strong>Resource Management & Consumer Affairs:</strong> Consumer Affairs Department positions, Consumer Protection Officer, District Consumer Forum Executive.</li>
+                    <li><strong>Estate & Event Management:</strong> Estate Officer / Property Manager, Gov Event Manager.</li>
+                    <li><strong>Food & Nutrition Roles:</strong> Food Safety Officer, Government Dietitians.</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><strong>Sports Departments:</strong> Sports Nutritionist roles within the Sports Authority of India (SAI).</li>
+                    <li><strong>Food Corporation of India (FCI):</strong> Technical Officer posts.</li>
+                    <li><strong>Research Institutions:</strong> Research Assistant positions in prominent bodies like NCERT, ICMR, and NIPCCD (National Institute of Public Cooperation and Child Development).</li>
+                    <li><strong>Higher Education:</strong> Opportunities to work as an Assistant Professor or Lecturer.</li>
+                    <li><strong>Handicrafts & Textiles:</strong> Handicrafts / Textile Marketing Officer, Designer positions in Weaver's Service Centres.</li>
+                    <li><strong>Welfare Services:</strong> CDPO (Child Development Project Officer) in government departments or allied NGOs.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h2>Top Government Colleges</h2>
+        <ul>
+            <li>Dr. Rajendra Prasad Central Agricultural University, Pusa</li>
+            <li>University of Delhi</li>
+            <li>Aligarh Muslim University (AMU)</li>
+            <li>Odisha University of Agriculture & Technology (OUAT)</li>
+            <li><a href="#" style="color: #FF6B6B; font-weight: bold; text-decoration: none;">Explore More Colleges →</a></li>
+        </ul>
+    </div>
+
+    <div class="info-section">
+        <h2>Can You Start Your Own Business?</h2>
+        <p style="font-style: italic; opacity: 0.85;">1.Nutrition and Diet consultancy
+        2.Child Development Centre
+        3.Preschool/Day care centre
+        4.Food and Nutritional startup
+        5.Boutique/Textile Business
+        6.Wellness coaching
+        7.Online Health Content Creation
+        8.Community Development NGOs. </p>
+    </div>
+
+    <div class="score-container">
+        <div class="score-title">PCB Express Score</div>
+        <div class="score-grid">
+            <div class="score-badge">Salary: 8/10</div>
+            <div class="score-badge">Growth: 9/10</div>
+            <div class="score-badge">Government Jobs: 8/10</div>
+            <div class="score-badge">Entrepreneurship: 7/10</div>
+            <div class="score-badge">Work-Life Balance: 8/10</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
