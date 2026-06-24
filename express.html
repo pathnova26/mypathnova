@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCB Express Series - 120+ Courses</title>
+    <style>
+        /* --- Base Setup --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            /* Light Blue Background for best text visibility */
+            background: linear-gradient(135deg, #E3F2FD 0%, #070f2b 100%);
+            background-attachment: fixed;
+            color: #1C2321; /* Deep charcoal text (No blue/purple/maroon) */
+            min-height: 100vh;
+            padding: 40px 5%;
+        }
+
+        /* --- Header Section --- */
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto 50px auto;
+            text-align: center;
+            background: #FFFFFF; /* Clean white card for message */
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border-bottom: 5px solid #0B6623; /* Deep Mint/Emerald Green Accent */
+        }
+        .header-container h1 {
+            font-size: 2.6rem;
+            color: #0B6623;
+            margin-bottom: 15px;
+        }
+        .header-container p {
+            font-size: 1.25rem; /* Bada text size as requested */
+            line-height: 1.7;
+            color: #333333;
+            font-weight: 500;
+        }
+
+        /* --- Grid Layout (3 Cards Per Line) --- */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 🚀 Strict 3 cards in one horizontal line */
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Clickable Uniform Card Design --- */
+        .course-card-link {
+            text-decoration: none; /* Removes underline from links */
+            color: inherit;
+            display: block;
+        }
+
+        .course-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(11, 102, 35, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+            /* 🚀 BINDING SIZE: Yeh property saare cards ka size har screen par exact same rakhegi */
+            height: 180px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hover Effect */
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(11, 102, 35, 0.15);
+            border-color: #00E676;
+        }
+
+        /* Card Text Style */
+        .course-name {
+            font-size: 1.35rem; /* Toda bada font size */
+            font-weight: 700;
+            color: #1C2321;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tap-text {
+            font-size: 0.9rem;
+            color: #0B6623;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* --- Responsive Adjustments (For Smaller Screens) --- */
+        @media (max-width: 900px) {
+            .courses-grid {
+                grid-template-columns: repeat(2, 1fr); /* Tablet par 2 cards per line automatic ho jayenge */
+            }
+            .header-container h1 { font-size: 2.1rem; }
+            .header-container p { font-size: 1.15rem; }
+        }
+
+        @media (max-width: 600px) {
+            .courses-grid {
+                grid-template-columns: 1fr; /* Mobile par 1 card per line taaki content crash na ho */
+            }
+        }/* --- Back Button Styling --- */
+.top-nav {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.back-btn {
+    display: inline-block;
+    color: #134E4A; /* Aap apne theme ke hisab se color badal sakte hain */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border: 2px solid #134E4A;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #134E4A;
+    color: #FFFFFF;
+}
+
+    </style>
+</head>
+<body>
+<div class="top-nav">
+    <a href="index.html" class="back-btn">← Back to Home</a>
+</div>
+
+    <!-- Top Header Message: Why PCB Express Started -->
+    <div class="header-container">
+        <h1>Why We Started PCB Express?</h1>
+        <p>Most Biology students believe that MBBS is the only successful path after 12th. This massive misconception creates immense pressure and heartbreak. We started the PCB Express Series to shatter this myth. The world of healthcare, research, biotechnology, and allied sciences is vast. Our goal is to introduce you to 120+ high-growth alternative career paths, giving every biology student the clarity, direction, and opportunity to build an extraordinary future!</p>
+    </div>
+
+    <!-- Main Grid Container -->
+    <div class="courses-grid">
+
+        <!-- ================= CARD 1 START ================= -->
+        <!-- Baad mein 'href="#"' ki jagah apni naye page ka naam likh dena jaise href="btech_biotech.html" -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (hons) Community science</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 1 END ================= -->
+
+        <!-- ================= CARD 2 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (hons) Statistics</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 2 END ================= -->
+
+        <!-- ================= CARD 3 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc ( Hons) Geography </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 3 END ================= -->
+
+        <!-- ================= CARD 4 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor in pharmacy</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 4 END ================= -->
+
+        <!-- ================= CARD 5 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc ( Hons) Life science</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 5 END ================= -->
+
+        <!-- ================= CARD 6 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">B.Sc (Hons) Food science and Technology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 6 END ================= -->
+
+  <!-- ================= CARD 7 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc ( Hons) Agriculture</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 7 END ================= -->
+
+       
+        <!-- ================= CARD 8 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">B.Sc ( Hons) Botany</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 8 END ================= -->
+
+ 
+        <!-- ================= CARD 9 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">B.Sc-Msc Botany</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 9 END ================= -->
+
+<!-- ================= CARD 10 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Chemistry </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 10 END ================= -->
+
+<!-- ================= CARD 11 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc-Msc Chemistry
+                 </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 11 END ================= -->
+<!-- ================= CARD 12 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc(Hons) Physics</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 12 END ================= -->
+<!-- ================= CARD 13 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc-Msc Physics</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 13 END ================= -->
+
+  <!-- ================= CARD 14 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc ( Hons) Earth science</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 14 END ================= -->
+        <!-- ================= CARD 15 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc ( Hons) Environmental science</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 15 END ================= -->
+         <!-- ================= CARD 16 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc-Msc Environmental Science</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 16 END ================= -->
+          <!-- ================= CARD 17 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor of vacation in food processing and management</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 17 END ================= -->
+        <!-- ================= CARD 18 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">B.Voc in Medical Lab Technology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 18 END ================= -->
+        
+     <!-- ================= CARD 19 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc ( Hons) Medical Technology (Radiotherapy)</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 19 END ================= -->   
+        <!-- ================= CARD 20 START ================= -->
+        <a href="medical_radiology.html" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Medical Radiology and Imaging Technology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 20 END ================= -->   
+        
+    <!-- ================= CARD 21 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Economics</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 21 END ================= --> 
+  <!-- ================= CARD 22 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Computer Science and artificial Intelligence</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 22 END ================= --> 
+  
+  <!-- ================= CARD 23 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Psychology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 23 END ================= --> 
+ <!-- ================= CARD 24 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">B.Voc Biomedical science</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 24 END ================= --> 
+ 
+ <!-- ================= CARD 25 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc- Msc Biotechnology </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 25 END ================= --> 
+ <!-- ================= CARD 26 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc ( Hons) Biotechnology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 26 END ================= --> 
+  <!-- ================= CARD 27 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">B.Tech Biotechnology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 27 END ================= --> 
+ <!-- ================= CARD 28 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc Geology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 28 END ================= --> 
+ 
+  <!-- ================= CARD 29 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc ( Hons) Forestry </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 29 END ================= --> 
+ 
+ <!-- ================= CARD 30 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">B.A LLB ( Hons)</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 30 END ================= --> 
+   
+  <!-- ================= CARD 31 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">BBA Hospitality and Tourism Management</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 31 END ================= -->  
+   
+    <!-- ================= CARD 32 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">BS-Ms Biological Science</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 32 END ================= -->  
+   
+   <!-- ================= CARD 33 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc ( Hons) Biochemistry</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 33 END ================= -->   
+   <!-- ================= CARD 34 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc ( Hons) Microbiology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 34 END ================= -->   
+   
+   <!-- ================= CARD 35 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Cardiology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 35 END ================= -->   
+   
+  <!-- ================= CARD 36 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Hotel management and catering technology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 36 END ================= -->   
+     <!-- ================= CARD 37 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc Bioinformatics</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 37 END ================= -->   
+   <!-- ================= CARD 38 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc-Msc Bioinformatics</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 38 END ================= -->   
+   <!-- ================= CARD 39 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Anthropology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 39 END ================= -->   
+   <!-- ================= CARD 40 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc( Hons) Electronics</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 40 END ================= -->   
+   <!-- ================= CARD 41 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc( Hons) Rural Technology</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 41 END ================= -->   
+   <!-- ================= CARD 42 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc( Hons) Forensic Science</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 42 END ================= -->   
+   <!-- ================= CARD 43 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc-Msc Forensic Science</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 43 END ================= -->   
+   
+     <!-- ================= CARD 44 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Horticulture</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 44 END ================= -->   
+   
+    <!-- ================= CARD 45 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc Multidisciplinary</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 45 END ================= -->   
+   
+      <!-- ================= CARD 46 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name"> Bsc Nursing</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 46 END ================= -->
+   <!-- ================= CARD 47 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Home science</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 47 END ================= -->
+   
+   <!-- ================= CARD 48 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">FYIMP in Geospatial biodiversity and wildlife analytics </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 48 END ================= --> 
+   <!-- ================= CARD 49 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">FYIMP in food Microbiology and Toxicology </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 49 END ================= --> 
+     <!-- ================= CARD 50 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc In Clinical biochemistry </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 50 END ================= --> 
+   
+  <!-- ================= CARD 51 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc Tour and Travel Management</h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 51 END ================= --> 
+  <!-- ================= CARD 52 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor in Audiology and speech language Pathology </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 52 END ================= --> 
+   <!-- ================= CARD 53 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor of Prosthetic and orthotics </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 53 END ================= --> 
+  
+  <!-- ================= CARD 54 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc in Data analytics
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 54 END ================= --> 
+   <!-- ================= CARD 55 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc-Msc Aryuveda Biology 
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 55 END ================= --> 
+<!-- ================= CARD 56 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc Packing Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 56 END ================= --> 
+<!-- ================= CARD 57 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc Geospatial Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 57 END ================= --> 
+<!-- ================= CARD 58 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc Bio-resources
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 58 END ================= --> 
+<!-- ================= CARD 59 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc Seed Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 59 END ================= --> 
+<!-- ================= CARD 60 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">B.Des  Design, Footwear development, Leather goods and accessory design
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 60 END ================= --> 
+
+<!-- ================= CARD 61 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Sericulthure
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 61 END ================= --> 
+
+<!-- ================= CARD 62 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Natural farming
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 62 END ================= --> 
+
+<!-- ================= CARD 63 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Btech food technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 63 END ================= --> 
+
+
+<!-- ================= CARD 64 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Agribusiness management
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 64 END ================= --> 
+ 
+  <!-- ================= CARD 65 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name"> B. Tech agriculture engineering
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 65 END ================= --> 
+  
+  <!-- ================= CARD 66 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name"> B. Tech Dairy Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 66 END ================= --> 
+  
+  
+  <!-- ================= CARD 67 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name"> Bachelor of Veterinary science and animal husbendary
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 67 END ================= --> 
+  
+   <!-- ================= CARD 68 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name"> BDS
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 68 END ================= --> 
+    
+     <!-- ================= CARD 69 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name"> Bachelor of Homeopathic Medicine and surgery
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 69 END ================= --> 
+    
+     <!-- ================= CARD 70 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name"> B. Tech Genetic Engineering
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 70 END ================= --> 
+    
+    <!-- ================= CARD 71 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name"> B. Voc Polymer and coating Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 71 END ================= --> 
+    
+  <!-- ================= CARD 72 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">B.A (Hons) Philosophy
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 72 END ================= --> 
+       <!-- ================= CARD 73 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor of Aryuvedic Medicine and surgery 
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 73 END ================= --> 
+      
+     <!-- ================= CARD 74 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor of unani medicine and surgery
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 74 END ================= --> 
+    <!-- ================= CARD 75 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor of Naturopathy and Yogic Science
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 75 END ================= -->   
+      <!-- ================= CARD 76 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor of Physiotherapy
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 76 END ================= -->   
+    <!-- ================= CARD 77 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc in Dialysis Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 77 END ================= -->   
+    
+ <!-- ================= CARD 78 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor of Siddha Medicine and Surgery 
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 78 END ================= -->
+
+ <!-- ================= CARD 79 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc in Dental Operating Room Assistant 
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 79 END ================= -->
+ 
+  <!-- ================= CARD 80 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc in Dental Hygiene
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+     
+       <!-- ================= CARD 80 END ================= -->
+
+ <!-- ================= CARD 81 START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc in Operation Theatre Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 81 END ================= -->
+ 
+ 
+
+ <!-- ================= CARD 82 
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Endoscopy Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 82 END ================= -->
+ 
+   <!-- ================= CARD 83
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor in Health Information
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 83 END ================= -->
+ 
+   <!-- ================= CARD 84
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor In ECG and Echocardiography
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 84 END ================= -->
+ 
+   <!-- ================= CARD 85
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Perfusion Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 85 END ================= -->
+ 
+   <!-- ================= CARD 86
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc in Anaesthesia Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 86 END ================= -->
+ 
+  <!-- ================= CARD 87
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc in Emergency Medicine Technician
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 87 END ================= -->
+  
+  <!-- ================= CARD 88
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bachelor in Respiratory Therapist
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 88 END ================= -->
+  
+  <!-- ================= CARD 89
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc In Neuro Electrophysiology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 89 END ================= -->
+  
+  <!-- ================= CARD 90
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc In Optometry Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 90 END ================= -->
+  
+  <!-- ================= CARD 91
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc In Medical Laboratory Science
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 91 END ================= -->
+  
+  <!-- ================= CARD 92
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc In Orthopaedics Assistant and Plaster Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 92 END ================= -->
+  
+  
+  <!-- ================= CARD 93
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc In Sleep Lab Technology
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 93 END ================= -->
+  
+  
+  <!-- ================= CARD 94
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc In Economics and statistical science
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 94 END ================= -->
+  
+    <!-- ================= CARD 95
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc (Hons) Food Nutrition and Dietetics
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 95 END ================= -->
+  
+  
+    <!-- ================= CARD 96
+START ================= -->
+        <a href="#" class="course-card-link">
+            <div class="course-card">
+                <h2 class="course-name">Bsc Criminology and Forensic science
+              </h2>
+                <span class="tap-text">VIEW DETAILS →</span>
+            </div>
+        </a>
+        <!-- ================= CARD 96 END ================= -->
+  
+    </div>
+
+
+</body>
+</html>
