@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B.Sc (Hons) Community Science</title>
     <style>
-        /* --- Base & Responsiveness Settings --- */
+        /* --- Base Settings & Background (Same as index.html) --- */
         * {
             margin: 0;
             padding: 0;
@@ -14,180 +14,183 @@
         }
 
         body {
-            /* Background image linked to community.jpg with a premium blue fallback gradient */
-            background: url('community.jpg') no-repeat center center fixed;
-            background-size: cover;
-            background-color: #E0F0FF; 
-            color: #134E4A; /* ✅ Primary Dark Teal Text Color */
-            font-size: 20px; /* ✅ Thoda bada text size as requested */
-            line-height: 1.8;
-            padding: 40px 6%;
+            background: linear-gradient(135deg, #0B0F2B 0%, #1B1C47 50%, #0F1335 100%);
+            background-attachment: fixed;
+            color: #FFFFFF;
+            min-height: 100vh;
+            padding: 30px 5%;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
-        /* --- Navigation / Back Button --- */
-        .top-nav {
-            margin-bottom: 30px;
+        /* --- Back Button Style --- */
+        .back-nav {
+            margin-bottom: 20px;
         }
 
         .back-btn {
             display: inline-block;
-            color: #134E4A;
+            color: #FFFFFF;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            padding: 8px 16px;
-            border: 2px solid #134E4A;
-            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
         }
 
         .back-btn:hover {
-            background-color: #134E4A;
-            color: #FFFFFF;
+            background: #FFFFFF;
+            color: #0B0F2B;
+            transform: translateX(-5px);
         }
 
-        /* --- Headings Styling --- */
-        h1 {
-            font-size: 2.8rem;
-            color: #FF6B6B; /* ✅ Highlight Color Coral/Pinkish Red */
+        /* --- Top Heading with Golden Border & Transparent Card --- */
+        .main-header-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid #D4AF37; /* ✅ Golden Border */
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+            border-radius: 16px;
+            padding: 25px;
             text-align: center;
-            margin-bottom: 50px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: #FF6B6B; /* ✅ Section Headings in Coral */
-            margin-top: 50px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid rgba(19, 78, 74, 0.2);
-            padding-bottom: 8px;
-        }
-
-        h3 {
-            font-size: 1.4rem;
-            color: #134E4A;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        /* --- Direct on Background Layout Structure --- */
-        .info-section {
             margin-bottom: 40px;
-            width: 100%;
         }
 
-        /* Responsive Grid for Details & Future expansion */
-        .details-grid {
+        .main-header-card h1 {
+            font-size: 2.5rem; /* ✅ Bada size */
+            color: #FFFFFF; /* ✅ White Color */
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* --- Responsive Grid Layout for Cards --- */
+        .cards-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* ✅ Har screen par automatic fit */
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        /* --- Standard Transparent Card Design --- */
+        .card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            color: #FFD700; /* Subtle Gold for headings */
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #E0E6ED;
+            line-height: 1.6;
             margin-bottom: 20px;
         }
 
-        .grid-item {
-            padding: 10px 0;
+        /* --- Beautiful Action Buttons inside Cards --- */
+        .card-btn {
+            display: inline-block;
+            text-align: center;
+            background: linear-gradient(90deg, #1E3A8A, #3B82F6);
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 11px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            margin-top: auto;
+            border: none;
+            cursor: pointer;
         }
 
-        .label {
-            font-weight: bold;
-            color: #FF6B6B;
-            display: block;
-            margin-bottom: 50pxpx;
+        .card-btn:hover {
+            background: linear-gradient(90deg, #3B82F6, #1D4ED8);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
         }
 
-        /* --- Lists Styling --- */
-        ul {
-            list-style-type: none;
-            padding-left: 0;
+        /* --- Bottom Full Info Cards Layout --- */
+        .bottom-full-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 30px;
         }
 
-        ul li {
+        .bottom-full-card h2 {
+            font-size: 1.8rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        /* Business Info List Style */
+        .business-list {
+            list-style: none;
+        }
+        .business-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
             position: relative;
-            padding-left: 30px;
-            margin-bottom: 14px;
+            font-size: 1.05rem;
         }
-
-        ul li::before {
-            content: "✦";
+        .business-list li::before {
+            content: "✔";
             position: absolute;
             left: 0;
-            color: #FF6B6B;
-            font-size: 1.2rem;
-            top: -2px;
+            color: #10B981;
         }
 
-        .sub-list {
-            padding-left: 20px;
-            margin-top: 8px;
-        }
-
-        .sub-list li::before {
-            content: "•";
-            color: #134E4A;
-            font-size: 1.3rem;
-            top: -1px;
-        }
-
-        /* Multi-column layout for easy reading of Gov Jobs on desktop */
-        .jobs-layout {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-        }
-
-        /* --- PCB Express Score Box --- */
-        .score-container {
-            margin-top: 60px;
-            border-top: 3px dashed #FF6B6B;
-            padding-top: 40px;
-            text-align: center;
-        }
-
-        .score-title {
-            font-size: 2.2rem;
-            color: #FF6B6B;
-            margin-bottom: 25px;
-        }
-
-        .score-grid {
+        /* Express Score Design */
+        .score-flex {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            gap: 15px;
+            margin-top: 15px;
         }
 
-        .score-badge {
-            border: 2px solid #134E4A;
-            padding: 12px 24px;
+        .score-tag {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
             border-radius: 30px;
             font-weight: bold;
-            font-size: 1.15rem;
-            background: rgba(255, 255, 255, 0.2);
+            font-size: 1.05rem;
         }
 
-        /* --- Responsive Queries for smaller screens --- */
-        @media (max-width: 900px) {
-            body {
-                font-size: 18px;
-                padding: 20px 4%;
-            }
-            .details-grid, .jobs-layout {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            h1 { font-size: 2.2rem; }
-            h2 { font-size: 1.6rem; }
+        /* --- Responsive Viewports Media Queries --- */
+        @media (max-width: 768px) {
+            body { padding: 20px 3%; }
+            .main-header-card h1 { font-size: 1.8rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .bottom-full-card h2 { font-size: 1.4rem; }
         }
     </style>
 </head>
@@ -195,162 +198,137 @@
 
 <div class="container">
 
-    <div class="top-nav">
+    <div class="back-nav">
         <a href="express.html" class="back-btn">← Back to Express</a>
     </div>
 
-    <h1>B.Sc. (Hons.) Community Science</h1>
+    <div class="main-header-card">
+        <h1>B.Sc (Hons) Community Science</h1>
+    </div>
 
-    <div class="info-section">
-        <div class="details-grid">
-            <div class="grid-item">
-                <span class="label">Course Name:</span>
-                <p>B.Sc (Hons) in Community Science<br><small style="opacity: 0.8;">[Previously known as B.Sc Home Science]</small></p>
+    <div class="cards-grid">
+
+        <div class="card">
+            <div>
+                <h2>Duration</h2>
+                <p>B.Sc Community Science is a complete undergraduate level professional course .</p>
             </div>
-            <div class="grid-item">
-                <span class="label">Duration:</span>
-                <p>4 Years (8 Semesters)</p>
+            <div style="font-size: 1.3rem; font-weight: bold; color: #FFFFFF; margin-bottom: 10px;">
+                4 Years [8 Semester]
             </div>
         </div>
-    </div>
 
-    <div class="info-section">
-        <h2>Eligibility Criteria</h2>
-        <ul>
-            <li><strong>Stream Requirements:</strong> PCB, PCM, or Arts streams eligibility.</li>
-            <li><strong>Minimum Marks:</strong> 50% marks required for General Category.</li>
-            <li><strong>Admission Through:</strong> 
-                <ul class="sub-list">
-                    <li>CUET (UG)</li>
-                    <li>University Entrance Exam</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div class="info-section">
-        <h2>Course Overview</h2>
-        <p>Community Science is a multidisciplinary course that focuses on improving the quality of life of individuals, families, and communities.</p>
-        
-        <h3>What Students Study About:</h3>
-        <ul>
-            <li>Human Nutrition</li>
-            <li>Food Science</li>
-            <li>Child Development</li>
-            <li>Resource Management & Consumer Science</li>
-            <li>Textile & Fashion</li>
-            <li>Extension Education & Communication Management</li>
-        </ul>
-    </div>
-
-    <div class="info-section">
-        <h2>Is This Course For You?</h2>
-        <p>This path is excellent if you have a keen interest or love for:</p>
-        <ul>
-            <li>Biology & Health</li>
-            <li>Working with Nutrition & Wellness</li>
-            <li>Child Development</li>
-            <li>Entrepreneurship</li>
-            <li>Creating Social Impact</li>
-        </ul>
-    </div>
-
-    <div class="info-section">
-        <h2>Skills for Best Placement</h2>
-        
-        <h3>1. Management & Designing Tools</h3>
-        <ul>
-            <li><strong>Auto CAD:</strong> Learn this software to design house maps and plan beautiful interior spaces efficiently.</li>
-        </ul>
-
-        <h3>2. Nutrition & Lab Skills</h3>
-        <ul>
-            <li><strong>Diet Planning:</strong> Utilize software and structured charts to accurately calculate calories and plan customized, specific diets for sick patients.</li>
-            <li><strong>Food Preservation:</strong> Master chemical and natural methodologies to freeze, dry, and safely pack food products to extend shelf life and prevent spoilage.</li>
-        </ul>
-
-        <h3>3. Media & Communication Skills</h3>
-        <ul>
-            <li>Audio-Visual Editing</li>
-            <li>Psychological Testing</li>
-        </ul>
-
-        <h3>4. Textile & Fashion Skills</h3>
-        <ul>
-            <li>Garment Construction</li>
-            <li>Textile Testing</li>
-        </ul>
-
-        <h3>5. Digital & Content Skills</h3>
-        <ul>
-            <li>Social Media Marketing</li>
-            <li>UI/UX Design</li>
-        </ul>
-
-        <h3>6. Professional Business Skills</h3>
-        <ul>
-            <li>Data Analysis</li>
-            <li>Grant Writing</li>
-        </ul>
-    </div>
-
-    <div class="info-section">
-        <h2>Government Job Opportunities</h2>
-        <div class="jobs-layout">
+        <div class="card">
             <div>
-                <ul>
-                    <li><strong>Gov Health & Awareness Programme:</strong> Mass Media Officer, Health Educator.</li>
-                    <li><strong>Ministry of Agriculture & Rural Development:</strong> Extension Officer, Krishi Vigyan Kendra Scientist.</li>
-                    <li><strong>Ministry of Information & Broadcasting:</strong> Gov Journalist / Reporter, Public Relations Officer.</li>
-                    <li><strong>Resource Management & Consumer Affairs:</strong> Consumer Affairs Department positions, Consumer Protection Officer, District Consumer Forum Executive.</li>
-                    <li><strong>Estate & Event Management:</strong> Estate Officer / Property Manager, Gov Event Manager.</li>
-                    <li><strong>Food & Nutrition Roles:</strong> Food Safety Officer, Government Dietitians.</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li><strong>Sports Departments:</strong> Sports Nutritionist roles within the Sports Authority of India (SAI).</li>
-                    <li><strong>Food Corporation of India (FCI):</strong> Technical Officer posts.</li>
-                    <li><strong>Research Institutions:</strong> Research Assistant positions in prominent bodies like NCERT, ICMR, and NIPCCD (National Institute of Public Cooperation and Child Development).</li>
-                    <li><strong>Higher Education:</strong> Opportunities to work as an Assistant Professor or Lecturer.</li>
-                    <li><strong>Handicrafts & Textiles:</strong> Handicrafts / Textile Marketing Officer, Designer positions in Weaver's Service Centres.</li>
-                    <li><strong>Welfare Services:</strong> CDPO (Child Development Project Officer) in government departments or allied NGOs.</li>
-                </ul>
+                <h2>Eligibility Criteria</h2>
+                <p style="margin-bottom: 5px;">• <strong>Stream:</strong> PCB, PCM, or Arts</p>
+                <p style="margin-bottom: 5px;">• <strong>Min Marks:</strong> 50% for General</p>
+                <p style="margin-bottom: 5px;">• <strong>Admission:</strong> CUET / Entrance Exam</p>
             </div>
         </div>
-    </div>
 
-    <div class="info-section">
-        <h2>Top Government Colleges</h2>
-        <ul>
-            <li>Dr. Rajendra Prasad Central Agricultural University, Pusa</li>
-            <li>University of Delhi</li>
-            <li>Aligarh Muslim University (AMU)</li>
-            <li>Odisha University of Agriculture & Technology (OUAT)</li>
-            <li><a href="#" style="color: #FF6B6B; font-weight: bold; text-decoration: none;">Explore More Colleges →</a></li>
-        </ul>
-    </div>
+        <div class="card">
+            <div>
+                <h2>Course Overview</h2>
+                <p>Community Science is a multidisciplinary path focusing on improving the family & community lifestyle quality.</p>
+            </div>
+            <a href="overview_details.html" class="card-btn">Read More</a>
+        </div>
 
-    <div class="info-section">
+        <div class="card">
+            <div>
+                <h2>What Students Study</h2>
+                <p>In this  course student study about Human Nutrition, Food Science, Child Development and  Textile designing.</p>
+            </div>
+            <a href="study_details.html" class="card-btn">Read More</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h2>Is This Course For You?</h2>
+                <p>If you like  Health, Nutrition, Social Impact and Child Development fields then this course is for you.</p>
+            </div>
+            <a href="guide_details.html" class="card-btn">Read Full Guide</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h2>Government Colleges</h2>
+                <p>Pursue these course from india's top premium government institutes and central agriculture university.</p>
+            </div>
+            <a href="gov_colleges.html" class="card-btn">See More</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h2>Private Colleges</h2>
+                <p>Top private universities that offer an excellent placement track record and high-tech infrastructure with advance laboratories.</p>
+            </div>
+            <a href="private_colleges.html" class="card-btn">Explore Colleges</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h2>Average Salary</h2>
+                <p>Details of the starting and highest salary package scales in modern industries for freshers and experienced professionals.</p>
+            </div>
+            <a href="salary_details.html" class="card-btn">Check Salary Scale</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h2>Government Jobs</h2>
+                <p>Food Safety Officer, Extension Officer, and Child Development Project Officer (CDPO) etc.</p>
+            </div>
+            <a href="gov_jobs.html" class="card-btn">View Gov Jobs</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h2>Private Jobs</h2>
+                <p> Carrier opportunity in Corporate healthcare, food production companies, fashion houses and top NGOs.</p>
+            </div>
+            <a href="private_jobs.html" class="card-btn">View Private Jobs</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h2>Placement Skills</h2>
+                <p>AutoCAD design, specialized diet planning, food preservation methodology and premium digital marketing tools skills.</p>
+            </div>
+            <a href="skills_details.html" class="card-btn">Learn Skills</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h2>Internships</h2>
+                <p>Live practical learning to gain exposure with top industries, laboratory centres and corporate organizations.</p>
+            </div>
+            <a href="internship_details.html" class="card-btn">Find Internships</a>
+        </div>
+
+    </div>
+    <div class="bottom-full-card">
         <h2>Can You Start Your Own Business?</h2>
-        <p style="font-style: italic; opacity: 0.85;">1.Nutrition and Diet consultancy
-        2.Child Development Centre
-        3.Preschool/Day care centre
-        4.Food and Nutritional startup
-        5.Boutique/Textile Business
-        6.Wellness coaching
-        7.Online Health Content Creation
-        8.Community Development NGOs. </p>
+        <p style="margin-bottom: 15px;">Yes, This course is considered highly beneficial for entrepreneurship .After completing it you can work on the business pathways listed below:</p>
+        <ul class="business-list">
+            <li><strong>Nutrition & Diet Consulting:</strong> You can open your own clinical diet and nutrition clinic.</li>
+            <li><strong>Child Care & Day-Care Centres:</strong> You can establish a school or activity center based on early childhood development standards.</li>
+            <li><strong>Food and Nutritional Startups:</strong> Safe health packed foods or organic production line.</li>
+            <li><strong>Boutique & Textile Business:</strong> Fashion design consulting and garments merchandising setups.</li>
+            <li><strong>Wellness Coaching:</strong> On Online platforms  personalized life-improvement models.</li>
+        </ul>
     </div>
 
-    <div class="score-container">
-        <div class="score-title">PCB Express Score</div>
-        <div class="score-grid">
-            <div class="score-badge">Salary: 8/10</div>
-            <div class="score-badge">Growth: 9/10</div>
-            <div class="score-badge">Government Jobs: 8/10</div>
-            <div class="score-badge">Entrepreneurship: 7/10</div>
-            <div class="score-badge">Work-Life Balance: 8/10</div>
+    <div class="bottom-full-card" style="margin-bottom: 50px;">
+        <h2>PCB Express Series Score</h2>
+        <p> The overall course analysis and detailed scorecard metrics report are presented below:</p>
+        <div class="score-flex">
+            <div class="score-tag" style="border-color: #3B82F6;">Salary: 8/10</div>
+            <div class="score-tag" style="border-color: #10B981;">Growth: 9/10</div>
+            <div class="score-tag" style="border-color: #F59E0B;">Government Jobs: 8/10</div>
+            <div class="score-tag" style="border-color: #EF4444;">Entrepreneurship: 7/10</div>
+            <div class="score-tag" style="border-color: #EC4899;">Work-Life Balance: 8/10</div>
         </div>
     </div>
 
